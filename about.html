@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Dental Clinic | عن العيادة</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#FAF7F5',
+                            card: '#F3EDE7',
+                            primary: '#2D2B2A',
+                            accent: '#D4A373',
+                            rose: '#E8B4B8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Alexandria', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="w-full py-5 px-8 md:px-16 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
+        <a href="index.html" class="flex items-center space-x-3 space-x-reverse">
+            <svg class="w-8 h-8 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4 21l3.39-1.03C8.93 20.26 10.88 21 13 21c4.97 0 9-4.03 9-9 0-1.46-.35-2.84-.97-4.07"></path>
+            </svg>
+            <div class="text-right">
+                <h1 class="text-xl font-bold tracking-wider text-stone-800 uppercase">GLOW</h1>
+                <p class="text-[10px] tracking-widest text-stone-500 uppercase -mt-1">Dental Clinic</p>
+            </div>
+        </a>
+        
+        <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-stone-600">
+            <a href="index.html" class="hover:text-stone-900 transition-colors">الرئيسية</a>
+            <a href="about.html" class="text-stone-900 font-semibold border-b-2 border-brand-accent pb-1">عن العيادة</a>
+            <a href="services.html" class="hover:text-stone-900 transition-colors">الخدمات</a>
+            <a href="location.html" class="hover:text-stone-900 transition-colors">الموقع</a>
+            <a href="contact.html" class="hover:text-stone-900 transition-colors">التواصل</a>
+        </nav>
+        
+        <a href="booking.html" class="bg-stone-900 text-white text-xs md:text-sm px-6 py-2.5 rounded-full hover:bg-stone-800 transition-all shadow-sm">
+            حجز استشارة
+        </a>
+    </header>
+
+    <!-- About Intro Section -->
+    <section class="py-16 px-8 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+            <span class="text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 rounded-full text-stone-700 font-semibold">جولة داخل العيادة</span>
+            <h2 class="text-3xl md:text-4xl font-light leading-tight text-stone-900">
+                بيئة راقية ومجهزة بأحدث الأجهزة الطبية.
+            </h2>
+            <p class="text-stone-600 font-light leading-relaxed">
+                في Glow Dental Clinic حرصنا على تصميم كل شبر في العيادة ليكون مريحاً وعصرياً؛ بدءاً من منطقتي الاستراحة والضيافة، مروراً بغرفة التعقيم الخاصة والمجهزة بأحدث الإمكانيات، وحتى عيادات الكشف والتخطيط الرقمي بالحاسوب.
+            </p>
+        </div>
+
+        <!-- Video Embed Container -->
+        <div class="relative w-full max-w-sm mx-auto md:max-w-none">
+            <div class="bg-stone-900 rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] md:max-h-[550px] mx-auto border-4 border-white/60">
+                <!-- استبدل tour-video.mp4 باسم ملف الفيديو عندك بالمشروع -->
+                <video controls class="w-full h-full object-cover">
+                    <source src="tour-video.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Overview Section -->
+    <section class="py-16 bg-stone-100/60 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80">
+                <span class="text-2xl mb-3 block">🛡️</span>
+                <h4 class="text-lg font-medium text-stone-800 mb-2">غرفة تعقيم مستقلة</h4>
+                <p class="text-xs text-stone-600 font-light leading-relaxed">أعلى مستويات السلامة والأمان باستخدام أحدث تقنيات التعقيم الدقيق.</p>
+            </div>
+            <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80">
+                <span class="text-2xl mb-3 block">💻</span>
+                <h4 class="text-lg font-medium text-stone-800 mb-2">تخطيط رقمي متطور</h4>
+                <p class="text-xs text-stone-600 font-light leading-relaxed">تخطيط مسبق لحالات الزراعة والتقويم عبر الحاسوب لضمان أعلى دقة.</p>
+            </div>
+            <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80">
+                <span class="text-2xl mb-3 block">☕</span>
+                <h4 class="text-lg font-medium text-stone-800 mb-2">استراحة مريحة</h4>
+                <p class="text-xs text-stone-600 font-light leading-relaxed">منطقة ضيافة مجهزة لتوفير أعلى مستويات الراحة لمرضانا وعائلاتهم.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-stone-900 text-white px-8 md:px-16 text-sm mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <p class="font-semibold text-lg">Glow Dental Clinic</p>
+                <p class="text-xs text-stone-400 mt-1">YOUR GLOW IS YOUR SIGNATURE</p>
+            </div>
+            <div class="text-stone-400 text-xs">
+                © 2026 Glow Dental Clinic. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

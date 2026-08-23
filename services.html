@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Dental Clinic | الخدمات والفرع</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#FAF7F5',
+                            card: '#F3EDE7',
+                            primary: '#2D2B2A',
+                            accent: '#D4A373',
+                            rose: '#E8B4B8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Alexandria', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="w-full py-5 px-8 md:px-16 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
+        <a href="index.html" class="flex items-center space-x-3 space-x-reverse">
+            <svg class="w-8 h-8 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4 21l3.39-1.03C8.93 20.26 10.88 21 13 21c4.97 0 9-4.03 9-9 0-1.46-.35-2.84-.97-4.07"></path>
+            </svg>
+            <div class="text-right">
+                <h1 class="text-xl font-bold tracking-wider text-stone-800 uppercase">GLOW</h1>
+                <p class="text-[10px] tracking-widest text-stone-500 uppercase -mt-1">Dental Clinic</p>
+            </div>
+        </a>
+        
+        <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-stone-600">
+            <a href="index.html" class="hover:text-stone-900 transition-colors">الرئيسية</a>
+            <a href="about.html" class="hover:text-stone-900 transition-colors">عن العيادة</a>
+            <a href="services.html" class="text-stone-900 font-semibold border-b-2 border-brand-accent pb-1">الخدمات</a>
+            <a href="location.html" class="hover:text-stone-900 transition-colors">الموقع</a>
+            <a href="contact.html" class="hover:text-stone-900 transition-colors">التواصل</a>
+        </nav>
+        
+        <a href="booking.html" class="bg-stone-900 text-white text-xs md:text-sm px-6 py-2.5 rounded-full hover:bg-stone-800 transition-all shadow-sm">
+            حجز استشارة
+        </a>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-16 px-8 md:px-16 max-w-7xl mx-auto text-center space-y-4">
+        <span class="text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 rounded-full text-stone-700 font-semibold">خدماتنا الطبية والتجميلية</span>
+        <h2 class="text-4xl font-light text-stone-900">رعاية متكاملة لابتسامتك</h2>
+        <p class="text-stone-600 font-light max-w-xl mx-auto leading-relaxed">
+            نعتمد على أحدث التقنيات وأجود المواد العالمية لتقديم كافة المعالجات والحلول التجميلية تحت إشراف نخبة من الأطباء.
+        </p>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-12 bg-stone-100/60 px-8 md:px-16 flex-1">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Service 1 -->
+            <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🦷</span>
+                <h3 class="text-xl font-medium text-stone-800">تقويم الأسنان (Orthodontics)</h3>
+                <p class="text-sm text-stone-600 font-light leading-relaxed">
+                    حلول تقويم الأسنان المعدني والشفاف (Invisalign) لتعديل استقامة الأسنان وتحسين الإطباق للكبار والأطفال.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">⚙️</span>
+                <h3 class="text-xl font-medium text-stone-800">زراعة الأسنان (Dental Implants)</h3>
+                <p class="text-sm text-stone-600 font-light leading-relaxed">
+                    استبدال الأسنان المفقودة بزراعات دقيقة وآمنة بتقنية التخطيط الرقمي لاستعادة وظيفة وشكل الفك الطبيعي.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🧸</span>
+                <h3 class="text-xl font-medium text-stone-800">طب أسنان الأطفال (Pediatric Dentistry)</h3>
+                <p class="text-sm text-stone-600 font-light leading-relaxed">
+                    عناية فائقة وخاصة بأطفالك في بيئة آمنة تمنع الخوف، وتشمل وقاية الأسنان وعلاج التسوس المبكر.
+                </p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">✨</span>
+                <h3 class="text-xl font-medium text-stone-800">التجميل والفينير (Veneers & Cosmetic)</h3>
+                <p class="text-sm text-stone-600 font-light leading-relaxed">
+                    تصميم ابتسامة هوليود باستخدام عدسات الفينير والايماكس فائقة الدقة لتحقيق مظهر طبيعي وجذاب.
+                </p>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🌱</span>
+                <h3 class="text-xl font-medium text-stone-800">علاج الجذور والحشوات التجميلية</h3>
+                <p class="text-sm text-stone-600 font-light leading-relaxed">
+                    إنقاذ الأسنان المتضررة بعلاج جذور بدون ألم باستخدام أحدث الأجهزة، مع حشوات تجميلية تماثل لون السن.
+                </p>
+            </div>
+
+            <!-- Service 6 / CTA Card -->
+            <div class="bg-brand-card p-8 rounded-2xl border border-stone-300/80 flex flex-col justify-between space-y-4">
+                <div>
+                    <span class="text-3xl block">📅</span>
+                    <h3 class="text-xl font-medium text-stone-800 mb-2">استشارة طبية متخصصة</h3>
+                    <p class="text-sm text-stone-600 font-light leading-relaxed">
+                        احجز كشفك الآن ليقوم فريقنا بتقييم حالتك ووضع خطة العلاج المناسبة.
+                    </p>
+                </div>
+                <a href="booking.html" class="inline-block text-center bg-stone-900 text-white py-3 px-6 rounded-full text-xs hover:bg-stone-800 transition-all">
+                    احجز موعدك الآن
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-stone-900 text-white px-8 md:px-16 text-sm mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <p class="font-semibold text-lg">Glow Dental Clinic</p>
+                <p class="text-xs text-stone-400 mt-1">YOUR GLOW IS YOUR SIGNATURE</p>
+            </div>
+            <div class="text-stone-400 text-xs">
+                © 2026 Glow Dental Clinic. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
