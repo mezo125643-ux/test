@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -33,18 +32,12 @@
 </head>
 <body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen">
 
-    <header class="w-full py-5 px-8 md:px-16 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
-        <a href="index.html" class="flex items-center space-x-3 space-x-reverse">
-            <svg class="w-8 h-8 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4 21l3.39-1.03C8.93 20.26 10.88 21 13 21c4.97 0 9-4.03 9-9 0-1.46-.35-2.84-.97-4.07"></path>
-            </svg>
-            <div class="text-right">
-                <h1 class="text-xl font-bold tracking-wider text-stone-800 uppercase">GLOW</h1>
-                <p class="text-[10px] tracking-widest text-stone-500 uppercase -mt-1">Dental Clinic</p>
-            </div>
+    <header class="w-full py-3 px-6 md:px-12 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
+        <a href="index.html" class="flex items-center shrink-0">
+            <img src="logo.png" alt="Glow Dental Clinic" class="h-24 md:h-28 w-auto min-w-[200px] object-cover">
         </a>
         
-        <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-stone-600">
+        <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-stone-600 items-center">
             <a href="index.html" class="text-stone-900 font-semibold border-b-2 border-brand-accent pb-1">الرئيسية</a>
             <a href="about.html" class="hover:text-stone-900 transition-colors">عن العيادة</a>
             <a href="services.html" class="hover:text-stone-900 transition-colors">الخدمات</a>
@@ -52,10 +45,26 @@
             <a href="contact.html" class="hover:text-stone-900 transition-colors">التواصل</a>
         </nav>
         
-        <a href="booking.html" class="bg-stone-900 text-white text-xs md:text-sm px-6 py-2.5 rounded-full hover:bg-stone-800 transition-all shadow-sm">
-            حجز استشارة
-        </a>
+        <div class="flex items-center gap-3">
+            <a href="booking.html" class="bg-stone-900 text-white text-xs md:text-sm px-6 py-3 rounded-full hover:bg-stone-800 transition-all shadow-sm shrink-0 flex items-center justify-center">
+                حجز استشارة
+            </a>
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden p-2 rounded-lg text-stone-800 hover:bg-stone-200/60 focus:outline-none transition-colors">
+                <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
     </header>
+    <div id="mobile-menu" class="md:hidden fixed inset-x-0 top-[73px] bg-brand-bg/95 backdrop-blur-md border-b border-stone-200/80 shadow-xl z-40 px-6 py-6 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none">
+        <nav class="flex flex-col space-y-4 text-stone-700 font-medium text-sm">
+            <a href="index.html" class="text-stone-900 font-semibold border-r-2 border-brand-accent pr-3">الرئيسية</a>
+            <a href="about.html" class="hover:text-stone-900 pr-3 transition-colors">عن العيادة</a>
+            <a href="services.html" class="hover:text-stone-900 pr-3 transition-colors">الخدمات</a>
+            <a href="location.html" class="hover:text-stone-900 pr-3 transition-colors">الموقع</a>
+            <a href="contact.html" class="hover:text-stone-900 pr-3 transition-colors">التواصل</a>
+        </nav>
+    </div>
 
     <section id="hero" class="py-20 px-8 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
@@ -117,18 +126,15 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
+
     <footer class="py-12 bg-stone-900 text-white px-6 md:px-16 text-sm mt-auto border-t border-stone-800">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-            
-            <!-- معلومات العيادة -->
             <div class="space-y-3">
                 <p class="font-bold text-xl tracking-wider uppercase">Glow Dental Clinic</p>
                 <p class="text-xs text-stone-400 leading-relaxed">YOUR GLOW IS YOUR SIGNATURE</p>
                 <p class="text-xs text-stone-400 leading-relaxed">عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.</p>
             </div>
 
-            <!-- قائمة روابط سريعة العمودية -->
             <div class="space-y-3">
                 <h3 class="text-lg font-bold text-white tracking-wide">روابط سريعة</h3>
                 <ul class="space-y-2 text-sm text-stone-300 font-medium">
@@ -141,7 +147,6 @@
                 </ul>
             </div>
 
-            <!-- وسائل التواصل الاجتماعي -->
             <div class="space-y-3">
                 <h3 class="text-lg font-bold text-white tracking-wide">تابعنا</h3>
                 <div class="flex items-center gap-4 pt-1">
@@ -157,7 +162,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
 
         <div class="max-w-7xl mx-auto border-t border-stone-800 mt-10 pt-6 text-center text-stone-500 text-xs">
@@ -165,7 +169,6 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/201551235518" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب" class="fixed bottom-6 left-6 z-50 flex items-center justify-center w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 group">
         <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
@@ -173,7 +176,6 @@
         <span class="absolute -z-10 inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
     </a>
 
-    <!-- Chatbot Widget -->
     <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
         <button id="chatbot-toggle" onclick="toggleChatbot()" class="flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-4 py-3.5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105">
             <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -228,6 +230,25 @@
     </div>
 
     <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            
+            const isOpen = !menu.classList.contains('pointer-events-none');
+            
+            if (isOpen) {
+                // إغلاق القائمة
+                menu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+                menu.classList.remove('opacity-100', 'translate-y-0');
+                icon.classList.remove('rotate-90');
+            } else {
+                // فتح القائمة
+                menu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'translate-y-0');
+                icon.classList.add('rotate-90');
+            }
+        }
+
         function toggleChatbot() {
             const win = document.getElementById('chatbot-window');
             win.classList.toggle('hidden');
@@ -235,12 +256,10 @@
 
         function sendQuickReply(option) {
             const chatMessages = document.getElementById('chat-messages');
-
             const userMsg = document.createElement('div');
             userMsg.className = 'flex items-end justify-end gap-2';
             userMsg.innerHTML = `<div class="bg-stone-900 text-white p-3 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">${option}</div>`;
             chatMessages.appendChild(userMsg);
-
             chatMessages.scrollTop = chatMessages.scrollHeight;
 
             setTimeout(() => {
@@ -254,7 +273,6 @@
                 } else if(option === 'حجز موعد') {
                     replyText = 'يمكنك اختيار الموعد المناسب لك مباشرة عبر صفحة الحجز:<br/><a href="booking.html" class="inline-block mt-2 bg-stone-900 text-white px-4 py-1.5 rounded-lg text-[10px]">الذهاب لصفحة الحجز 📅</a>';
                 }
-
                 const botMsg = document.createElement('div');
                 botMsg.className = 'flex items-start gap-2';
                 botMsg.innerHTML = `<div class="bg-stone-200/80 text-stone-800 p-3 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed">${replyText}</div>`;
