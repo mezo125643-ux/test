@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth overflow-x-hidden">
+<html lang="ar" dir="rtl" class="scroll-smooth overflow-x-hidden max-w-full">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Glow Dental Clinic | الرئيسية</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,12 +30,19 @@
             }
         }
     </script>
+    <style>
+        html, body {
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+        }
+    </style>
 </head>
-<body class="bg-brand-bg dark:bg-stone-900 text-brand-primary dark:text-stone-100 font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen transition-colors duration-300 overflow-x-hidden w-full">
+<body class="bg-brand-bg dark:bg-stone-900 text-brand-primary dark:text-stone-100 font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen transition-colors duration-300 overflow-x-hidden max-w-full">
 
-    <header class="w-full py-2.5 px-3 sm:px-6 md:px-12 flex justify-between items-center border-b border-stone-200/60 dark:border-stone-800 sticky top-0 bg-brand-bg/90 dark:bg-stone-900/90 backdrop-blur-md z-50">
-        <a href="index.html" class="flex items-center shrink-0">
-            <img src="logo.png" alt="Glow Dental Clinic" class="h-12 sm:h-16 md:h-24 w-auto object-contain">
+    <!-- Header -->
+    <header class="w-full py-2.5 px-3 sm:px-6 md:px-12 flex justify-between items-center border-b border-stone-200/60 dark:border-stone-800 sticky top-0 bg-brand-bg/90 dark:bg-stone-900/90 backdrop-blur-md z-50 overflow-hidden">
+        <a href="index.html" class="flex items-center shrink">
+            <img src="logo.png" alt="Glow Dental Clinic" class="h-10 sm:h-14 md:h-20 w-auto object-contain">
         </a>
         
         <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-stone-600 dark:text-stone-300 items-center">
@@ -47,22 +54,20 @@
         </nav>
         
         <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
-            <!-- Dark Mode Toggle Button -->
             <button onclick="toggleDarkMode()" aria-label="Dark Mode" class="p-1.5 sm:p-2 rounded-full border border-stone-300 dark:border-stone-700 text-stone-800 dark:text-stone-200 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition-colors text-xs sm:text-base">
                 <span id="dark-icon" class="block dark:hidden">🌙</span>
                 <span id="light-icon" class="hidden dark:block">☀️</span>
             </button>
 
-            <!-- Language Switcher Button -->
-            <button onclick="toggleLanguage()" id="lang-btn" aria-label="Language Switcher" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full border border-stone-300 dark:border-stone-700 text-[11px] sm:text-xs font-semibold text-stone-800 dark:text-stone-200 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition-colors">
+            <button onclick="toggleLanguage()" id="lang-btn" aria-label="Language Switcher" class="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-stone-300 dark:border-stone-700 text-[11px] sm:text-xs font-semibold text-stone-800 dark:text-stone-200 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition-colors">
                 EN
             </button>
 
-            <a href="booking.html" data-i18n="btn_book_consultation" class="bg-stone-900 dark:bg-brand-accent dark:text-stone-900 text-white text-[11px] sm:text-xs md:text-sm px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full hover:bg-stone-800 dark:hover:bg-yellow-600 transition-all shadow-sm shrink-0 flex items-center justify-center whitespace-nowrap">
+            <a href="booking.html" data-i18n="btn_book_consultation" class="bg-stone-900 dark:bg-brand-accent dark:text-stone-900 text-white text-[10px] sm:text-xs md:text-sm px-2.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full hover:bg-stone-800 dark:hover:bg-yellow-600 transition-all shadow-sm shrink-0 whitespace-nowrap">
                 حجز استشارة
             </a>
             
-            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden p-1.5 sm:p-2 rounded-lg text-stone-800 dark:text-stone-200 hover:bg-stone-200/60 dark:hover:bg-stone-800 focus:outline-none transition-colors shrink-0">
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden p-1.5 rounded-lg text-stone-800 dark:text-stone-200 hover:bg-stone-200/60 dark:hover:bg-stone-800 focus:outline-none transition-colors shrink-0">
                 <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -70,7 +75,8 @@
         </div>
     </header>
 
-    <div id="mobile-menu" class="md:hidden fixed inset-x-0 top-[60px] sm:top-[73px] bg-brand-bg/95 dark:bg-stone-900/95 backdrop-blur-md border-b border-stone-200/80 dark:border-stone-800 shadow-xl z-40 px-6 py-6 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-x-0 top-[55px] sm:top-[70px] bg-brand-bg/95 dark:bg-stone-900/95 backdrop-blur-md border-b border-stone-200/80 dark:border-stone-800 shadow-xl z-40 px-6 py-6 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none">
         <nav class="flex flex-col space-y-4 text-stone-700 dark:text-stone-300 font-medium text-sm">
             <a href="index.html" data-i18n="nav_home" class="text-stone-900 dark:text-white font-semibold border-r-2 border-brand-accent pr-3">الرئيسية</a>
             <a href="about.html" data-i18n="nav_about" class="hover:text-stone-900 dark:hover:text-white pr-3 transition-colors">عن العيادة</a>
@@ -80,59 +86,62 @@
         </nav>
     </div>
 
-    <section id="hero" class="py-12 md:py-20 px-6 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div class="space-y-4 md:space-y-6">
+    <!-- Hero Section -->
+    <section id="hero" class="py-8 sm:py-12 md:py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center overflow-hidden">
+        <div class="space-y-4">
             <span class="inline-block text-[10px] sm:text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 dark:bg-stone-800 dark:text-stone-300 rounded-full text-stone-700 font-semibold">Your Glow Is Your Signature</span>
-            <h2 data-i18n="hero_title" class="text-3xl sm:text-4xl md:text-5xl font-light leading-tight text-stone-900 dark:text-white">
+            <h2 data-i18n="hero_title" class="text-2xl sm:text-4xl md:text-5xl font-light leading-tight text-stone-900 dark:text-white">
                 نصنع الابتسامة التي تستحقها.
             </h2>
-            <p data-i18n="hero_desc" class="text-stone-600 dark:text-stone-400 font-light leading-relaxed text-sm sm:text-base max-w-md">
+            <p data-i18n="hero_desc" class="text-stone-600 dark:text-stone-400 font-light leading-relaxed text-xs sm:text-base max-w-md">
                 فريق كامل متخصص في جميع مجالات طب الأسنان. نوفر لك الرعاية الكاملة في بيئة مريحة ومصممة بعناية لضمان أفضل نتائج تجميلية وصحية.
             </p>
-            <div class="pt-2 sm:pt-4 flex items-center gap-3 sm:gap-4 flex-wrap">
-                <a href="booking.html" data-i18n="hero_btn_book" class="bg-stone-900 dark:bg-brand-accent dark:text-stone-900 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm hover:shadow-lg transition-all">احجز استشارتك الان</a>
-                <a href="location.html" data-i18n="hero_btn_location" class="border border-stone-300 dark:border-stone-700 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">موقع العيادة</a>
+            <div class="pt-2 flex items-center gap-3 flex-wrap">
+                <a href="booking.html" data-i18n="hero_btn_book" class="bg-stone-900 dark:bg-brand-accent dark:text-stone-900 text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-full text-xs sm:text-sm hover:shadow-lg transition-all">احجز استشارتك الان</a>
+                <a href="location.html" data-i18n="hero_btn_location" class="border border-stone-300 dark:border-stone-700 px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-full text-xs sm:text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">موقع العيادة</a>
             </div>
         </div>
         
-        <div class="relative mt-4 md:mt-0">
-            <div class="w-full h-[320px] sm:h-[450px] bg-stone-300 dark:bg-stone-800 rounded-3xl overflow-hidden shadow-xl relative">
+        <div class="relative w-full">
+            <div class="w-full h-[280px] sm:h-[450px] bg-stone-300 dark:bg-stone-800 rounded-3xl overflow-hidden shadow-xl relative">
                 <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Glow Dental Clinic Clinic Interior" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="absolute -bottom-6 ltr:left-4 rtl:-right-4 sm:ltr:left-6 sm:rtl:-right-6 bg-white/90 dark:bg-stone-800/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-lg border border-stone-100 dark:border-stone-700 max-w-[240px] sm:max-w-xs">
-                <p data-i18n="location_badge" class="text-[10px] sm:text-xs text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-1">الموقع</p>
+            <!-- Location Badge Fix: Restricted to inside margins -->
+            <div class="absolute bottom-3 right-3 left-3 sm:left-auto sm:right-4 bg-white/90 dark:bg-stone-800/90 backdrop-blur-md p-3 sm:p-5 rounded-2xl shadow-lg border border-stone-100 dark:border-stone-700 sm:max-w-xs">
+                <p data-i18n="location_badge" class="text-[9px] sm:text-xs text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-0.5">الموقع</p>
                 <p data-i18n="location_address" class="text-xs sm:text-sm font-semibold text-stone-800 dark:text-stone-200">الدقي، الجيزة - شارع الثورة</p>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-16 sm:py-20 bg-stone-100/60 dark:bg-stone-800/40 px-6 md:px-16">
+    <!-- Services Section -->
+    <section id="services" class="py-12 sm:py-20 bg-stone-100/60 dark:bg-stone-800/40 px-4 sm:px-6 md:px-16 overflow-hidden">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-xl mx-auto mb-12 sm:mb-16 space-y-3">
+            <div class="text-center max-w-xl mx-auto mb-10 sm:mb-16 space-y-2">
                 <h3 data-i18n="services_subtitle" class="text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400 font-semibold">تخصصاتنا</h3>
-                <h4 data-i18n="services_title" class="text-2xl sm:text-3xl font-light text-stone-900 dark:text-white">خدمات طبية وتجميلية متكاملة</h4>
+                <h4 data-i18n="services_title" class="text-xl sm:text-3xl font-light text-stone-900 dark:text-white">خدمات طبية وتجميلية متكاملة</h4>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                <div class="bg-brand-bg dark:bg-stone-800 p-6 sm:p-8 rounded-2xl border border-stone-200/80 dark:border-stone-700 hover:shadow-md transition-shadow">
-                    <span class="text-2xl mb-4 block">✨</span>
-                    <h5 data-i18n="srv1_title" class="text-lg sm:text-xl font-medium mb-3 text-stone-800 dark:text-stone-100">ابتسامة هوليود (Veneers)</h5>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-brand-bg dark:bg-stone-800 p-6 rounded-2xl border border-stone-200/80 dark:border-stone-700">
+                    <span class="text-2xl mb-3 block">✨</span>
+                    <h5 data-i18n="srv1_title" class="text-base sm:text-xl font-medium mb-2 text-stone-800 dark:text-stone-100">ابتسامة هوليود (Veneers)</h5>
                     <p data-i18n="srv1_desc" class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed">
                         تصميم ابتسامة طبيعية متناسقة مع ملامح الوجه باستخدام أحدث تقنيات العدسات اللاصقة.
                     </p>
                 </div>
 
-                <div class="bg-brand-bg dark:bg-stone-800 p-6 sm:p-8 rounded-2xl border border-stone-200/80 dark:border-stone-700 hover:shadow-md transition-shadow">
-                    <span class="text-2xl mb-4 block">🦷</span>
-                    <h5 data-i18n="srv2_title" class="text-lg sm:text-xl font-medium mb-3 text-stone-800 dark:text-stone-100">زراعة وتقويم الأسنان</h5>
+                <div class="bg-brand-bg dark:bg-stone-800 p-6 rounded-2xl border border-stone-200/80 dark:border-stone-700">
+                    <span class="text-2xl mb-3 block">🦷</span>
+                    <h5 data-i18n="srv2_title" class="text-base sm:text-xl font-medium mb-2 text-stone-800 dark:text-stone-100">زراعة وتقويم الأسنان</h5>
                     <p data-i18n="srv2_desc" class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed">
                         حلول دائمة ومتطورة لاستعادة وظيفة الأسنان ومظهرها الطبيعي بأعلى درجات الأمان.
                     </p>
                 </div>
 
-                <div class="bg-brand-bg dark:bg-stone-800 p-6 sm:p-8 rounded-2xl border border-stone-200/80 dark:border-stone-700 hover:shadow-md transition-shadow">
-                    <span class="text-2xl mb-4 block">🌿</span>
-                    <h5 data-i18n="srv3_title" class="text-lg sm:text-xl font-medium mb-3 text-stone-800 dark:text-stone-100">العناية المتكاملة والوقاية</h5>
+                <div class="bg-brand-bg dark:bg-stone-800 p-6 rounded-2xl border border-stone-200/80 dark:border-stone-700">
+                    <span class="text-2xl mb-3 block">🌿</span>
+                    <h5 data-i18n="srv3_title" class="text-base sm:text-xl font-medium mb-2 text-stone-800 dark:text-stone-100">العناية المتكاملة والوقاية</h5>
                     <p data-i18n="srv3_desc" class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed">
                         جلسات تنظيف، تبييض، وعلاج اللثة بأحدث الأجهزة لضمان صحة الفم والأسنان.
                     </p>
@@ -141,17 +150,18 @@
         </div>
     </section>
 
-    <footer class="py-12 bg-stone-900 text-white px-6 md:px-16 text-sm mt-auto border-t border-stone-800">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-            <div class="space-y-3">
-                <p class="font-bold text-xl tracking-wider uppercase">Glow Dental Clinic</p>
-                <p class="text-xs text-stone-400 leading-relaxed">YOUR GLOW IS YOUR SIGNATURE</p>
+    <!-- Footer -->
+    <footer class="py-10 bg-stone-900 text-white px-4 sm:px-6 md:px-16 text-sm mt-auto border-t border-stone-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <div class="space-y-2">
+                <p class="font-bold text-lg tracking-wider uppercase">Glow Dental Clinic</p>
+                <p class="text-[10px] text-stone-400 leading-relaxed">YOUR GLOW IS YOUR SIGNATURE</p>
                 <p data-i18n="footer_about" class="text-xs text-stone-400 leading-relaxed">عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.</p>
             </div>
 
-            <div class="space-y-3">
-                <h3 data-i18n="footer_links" class="text-lg font-bold text-white tracking-wide">روابط سريعة</h3>
-                <ul class="space-y-2 text-sm text-stone-300 font-medium">
+            <div class="space-y-2">
+                <h3 data-i18n="footer_links" class="text-base font-bold text-white">روابط سريعة</h3>
+                <ul class="space-y-1.5 text-xs text-stone-300">
                     <li><a href="index.html" data-i18n="nav_home" class="hover:text-brand-accent transition-colors block py-0.5">الرئيسية</a></li>
                     <li><a href="about.html" data-i18n="nav_about" class="hover:text-brand-accent transition-colors block py-0.5">عن العيادة</a></li>
                     <li><a href="services.html" data-i18n="nav_services" class="hover:text-brand-accent transition-colors block py-0.5">الخدمات</a></li>
@@ -161,84 +171,62 @@
                 </ul>
             </div>
 
-            <div class="space-y-3">
-                <h3 data-i18n="footer_follow" class="text-lg font-bold text-white tracking-wide">تابعنا</h3>
-                <div class="flex items-center gap-4 pt-1">
-                    <a href="https://www.facebook.com/1181129205081995?ref=PROFILE_EDIT_xav_ig_profile_page_web" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-brand-accent hover:text-stone-900 flex items-center justify-center transition-colors" aria-label="Facebook">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
+            <div class="space-y-2">
+                <h3 data-i18n="footer_follow" class="text-base font-bold text-white">تابعنا</h3>
+                <div class="flex items-center gap-3 pt-1">
+                    <a href="https://www.facebook.com/1181129205081995?ref=PROFILE_EDIT_xav_ig_profile_page_web" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-brand-accent hover:text-stone-900 flex items-center justify-center transition-colors" aria-label="Facebook">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
-                    <a href="https://www.instagram.com/glow_dental_clinics?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-brand-accent hover:text-stone-900 flex items-center justify-center transition-colors" aria-label="Instagram">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
+                    <a href="https://www.instagram.com/glow_dental_clinics?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-brand-accent hover:text-stone-900 flex items-center justify-center transition-colors" aria-label="Instagram">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div data-i18n="footer_rights" class="max-w-7xl mx-auto border-t border-stone-800 mt-10 pt-6 text-center text-stone-500 text-xs">
+        <div data-i18n="footer_rights" class="max-w-7xl mx-auto border-t border-stone-800 mt-8 pt-4 text-center text-stone-500 text-[11px]">
             © 2026 Glow Dental Clinic. جميع الحقوق محفوظة.
         </div>
     </footer>
 
-    <a href="https://wa.me/201551235518" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب" class="fixed bottom-6 left-6 z-50 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 group">
-        <svg class="w-6 h-6 sm:w-8 sm:h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-        </svg>
-        <span class="absolute -z-10 inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
+    <!-- Fixed Floating Buttons -->
+    <a href="https://wa.me/201551235518" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب" class="fixed bottom-4 left-4 z-50 flex items-center justify-center w-11 h-11 sm:w-13 sm:h-13 bg-emerald-600 text-white rounded-full shadow-lg">
+        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
-    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
-        <button id="chatbot-toggle" onclick="toggleChatbot()" class="flex items-center gap-2 bg-stone-900 dark:bg-stone-800 border border-stone-800 dark:border-stone-700 hover:bg-stone-800 text-white px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105">
-            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 animate-pulse"></span>
-            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-            </svg>
-            <span data-i18n="chat_btn" class="text-[11px] sm:text-xs font-semibold">مساعد Glow الذكي</span>
+    <div id="chatbot-container" class="fixed bottom-4 right-4 z-50">
+        <button id="chatbot-toggle" onclick="toggleChatbot()" class="flex items-center gap-1.5 bg-stone-900 dark:bg-stone-800 border border-stone-800 dark:border-stone-700 text-white px-3 py-2.5 rounded-full shadow-xl">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+            <span data-i18n="chat_btn" class="text-[11px] font-semibold hidden sm:inline">مساعد Glow الذكي</span>
         </button>
 
-        <div id="chatbot-window" class="hidden fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-[310px] sm:w-[380px] bg-white dark:bg-stone-800 rounded-3xl shadow-2xl border border-stone-200 dark:border-stone-700 overflow-hidden flex flex-col z-50 transition-all duration-300 max-w-[calc(100vw-2rem)]">
-            <div class="bg-stone-900 text-white p-4 flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-brand-accent/20 border border-brand-accent/40 flex items-center justify-center text-brand-accent font-bold text-xs sm:text-sm">
-                        ✨
-                    </div>
+        <div id="chatbot-window" class="hidden fixed bottom-16 right-3 left-3 sm:left-auto sm:right-6 w-auto sm:w-[360px] bg-white dark:bg-stone-800 rounded-2xl shadow-2xl border border-stone-200 dark:border-stone-700 overflow-hidden flex flex-col z-50">
+            <div class="bg-stone-900 text-white p-3 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold text-xs">✨</div>
                     <div>
-                        <h4 data-i18n="chat_header_title" class="text-xs sm:text-sm font-semibold">مساعد Glow الطبي</h4>
-                        <p data-i18n="chat_header_status" class="text-[9px] sm:text-[10px] text-emerald-400 flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span> متواجد حالياً لخدمتك
-                        </p>
+                        <h4 data-i18n="chat_header_title" class="text-xs font-semibold">مساعد Glow الطبي</h4>
+                        <p data-i18n="chat_header_status" class="text-[9px] text-emerald-400">متواجد حالياً لخدمتك</p>
                     </div>
                 </div>
-                <button onclick="toggleChatbot()" class="text-stone-400 hover:text-white p-1 rounded-lg">
-                    ✕
-                </button>
+                <button onclick="toggleChatbot()" class="text-stone-400 hover:text-white p-1">✕</button>
             </div>
 
-            <div id="chat-messages" class="p-4 h-[260px] sm:h-[300px] overflow-y-auto space-y-3 bg-stone-50/50 dark:bg-stone-900/50 text-xs">
+            <div id="chat-messages" class="p-3 h-[240px] overflow-y-auto space-y-2 bg-stone-50/50 dark:bg-stone-900/50 text-xs">
                 <div class="flex items-start gap-2">
-                    <div data-i18n="chat_welcome" class="bg-stone-200/80 dark:bg-stone-700 dark:text-stone-100 text-stone-800 p-3 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed">
+                    <div data-i18n="chat_welcome" class="bg-stone-200/80 dark:bg-stone-700 dark:text-stone-100 text-stone-800 p-2.5 rounded-2xl rounded-tr-none max-w-[90%] leading-relaxed">
                         أهلاً بك في **Glow Dental Clinic**! 🦷<br/>
                         كيف يمكنني مساعدتك اليوم؟ يمكنك اختيار إحدى الأزرار بالأسفل:
                     </div>
                 </div>
             </div>
 
-            <div class="p-3 bg-white dark:bg-stone-800 border-t border-stone-100 dark:border-stone-700 grid grid-cols-2 gap-2 text-[10px] sm:text-[11px]">
-                <button onclick="sendQuickReply('مواعيد العمل')" data-i18n="chat_opt_hours" class="bg-brand-bg dark:bg-stone-700 dark:text-stone-200 hover:bg-brand-card dark:hover:bg-stone-600 text-stone-700 py-2 px-2.5 rounded-xl border border-stone-200/80 dark:border-stone-600 text-right font-medium transition-colors">
-                    🕒 مواعيد العمل
-                </button>
-                <button onclick="sendQuickReply('موقع العيادة')" data-i18n="chat_opt_location" class="bg-brand-bg dark:bg-stone-700 dark:text-stone-200 hover:bg-brand-card dark:hover:bg-stone-600 text-stone-700 py-2 px-2.5 rounded-xl border border-stone-200/80 dark:border-stone-600 text-right font-medium transition-colors">
-                    📍 موقع العيادة
-                </button>
-                <button onclick="sendQuickReply('الخدمات والأسعار')" data-i18n="chat_opt_services" class="bg-brand-bg dark:bg-stone-700 dark:text-stone-200 hover:bg-brand-card dark:hover:bg-stone-600 text-stone-700 py-2 px-2.5 rounded-xl border border-stone-200/80 dark:border-stone-600 text-right font-medium transition-colors">
-                    ✨ الخدمات والأسعار
-                </button>
-                <button onclick="sendQuickReply('حجز موعد')" data-i18n="chat_opt_booking" class="bg-stone-900 dark:bg-brand-accent dark:text-stone-900 hover:bg-stone-800 text-white py-2 px-2.5 rounded-xl text-right font-medium transition-colors">
-                    📅 حجز موعد كشف
-                </button>
+            <div class="p-2.5 bg-white dark:bg-stone-800 border-t border-stone-100 dark:border-stone-700 grid grid-cols-2 gap-1.5 text-[10px]">
+                <button onclick="sendQuickReply('مواعيد العمل')" data-i18n="chat_opt_hours" class="bg-brand-bg dark:bg-stone-700 dark:text-stone-200 text-stone-700 py-1.5 px-2 rounded-xl border border-stone-200/80 dark:border-stone-600 text-right font-medium">🕒 مواعيد العمل</button>
+                <button onclick="sendQuickReply('موقع العيادة')" data-i18n="chat_opt_location" class="bg-brand-bg dark:bg-stone-700 dark:text-stone-200 text-stone-700 py-1.5 px-2 rounded-xl border border-stone-200/80 dark:border-stone-600 text-right font-medium">📍 موقع العيادة</button>
+                <button onclick="sendQuickReply('الخدمات والأسعار')" data-i18n="chat_opt_services" class="bg-brand-bg dark:bg-stone-700 dark:text-stone-200 text-stone-700 py-1.5 px-2 rounded-xl border border-stone-200/80 dark:border-stone-600 text-right font-medium">✨ الخدمات والأسعار</button>
+                <button onclick="sendQuickReply('حجز موعد')" data-i18n="chat_opt_booking" class="bg-stone-900 dark:bg-brand-accent dark:text-stone-900 text-white py-1.5 px-2 rounded-xl text-right font-medium">📅 حجز موعد</button>
             </div>
         </div>
     </div>
@@ -247,7 +235,6 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
-            
             const isOpen = !menu.classList.contains('pointer-events-none');
             
             if (isOpen) {
@@ -262,38 +249,36 @@
         }
 
         function toggleChatbot() {
-            const win = document.getElementById('chatbot-window');
-            win.classList.toggle('hidden');
+            document.getElementById('chatbot-window').classList.toggle('hidden');
         }
 
         function sendQuickReply(option) {
             const chatMessages = document.getElementById('chat-messages');
             const userMsg = document.createElement('div');
             userMsg.className = 'flex items-end justify-end gap-2';
-            userMsg.innerHTML = `<div class="bg-stone-900 text-white p-3 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">${option}</div>`;
+            userMsg.innerHTML = `<div class="bg-stone-900 text-white p-2.5 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">${option}</div>`;
             chatMessages.appendChild(userMsg);
             chatMessages.scrollTop = chatMessages.scrollHeight;
 
             setTimeout(() => {
                 let replyText = '';
                 if(option === 'مواعيد العمل') {
-                    replyText = currentLang === 'ar' ? 'نستقبلكم يومياً من الساعة 2 ظهراً حتى 10 مساءً (بالحجز المسبق لضمان عدم الانتظار).' : 'We are open daily from 2 PM to 10 PM (By prior appointment to avoid waiting).';
+                    replyText = currentLang === 'ar' ? 'نستقبلكم يومياً من الساعة 2 ظهراً حتى 10 مساءً.' : 'Daily 2 PM to 10 PM.';
                 } else if(option === 'موقع العيادة') {
-                    replyText = currentLang === 'ar' ? 'عنواننا: الدقي، الجيزة - 20 شارع الثورة، الدور الرابع.<br/><a href="location.html" class="underline text-brand-accent font-semibold mt-1 inline-block">اضغط هنا لرؤية الخريطة والتفاصيل</a>' : 'Address: Dokki, Giza - 20 El Thawra St, 4th Floor.<br/><a href="location.html" class="underline text-brand-accent font-semibold mt-1 inline-block">Click here for map and details</a>';
+                    replyText = currentLang === 'ar' ? 'الدقي - شارع الثورة.<br/><a href="location.html" class="underline text-brand-accent font-semibold">رؤية الخريطة</a>' : 'Dokki - El Thawra St.<br/><a href="location.html" class="underline text-brand-accent">View Map</a>';
                 } else if(option === 'الخدمات والأسعار') {
-                    replyText = currentLang === 'ar' ? 'نوفر خدمات: ابتسامة هوليود، زراعة وتقويم الأسنان، والتبييض والتنظيف. تختلف التكلفة بحسب الحالة بعد الفحص والتصوير.' : 'Services: Hollywood Smile, Dental Implants & Orthodontics, Whitening & Cleaning. Costs vary depending on case evaluation.';
+                    replyText = currentLang === 'ar' ? 'ابتسامة هوليود، زراعة وتقويم الأسنان، والتبييض والتنظيف.' : 'Hollywood Smile, Implants, Orthodontics, Whitening.';
                 } else if(option === 'حجز موعد') {
-                    replyText = currentLang === 'ar' ? 'يمكنك اختيار الموعد المناسب لك مباشرة عبر صفحة الحجز:<br/><a href="booking.html" class="inline-block mt-2 bg-stone-900 text-white px-4 py-1.5 rounded-lg text-[10px]">الذهاب لصفحة الحجز 📅</a>' : 'Select a suitable time directly via our booking page:<br/><a href="booking.html" class="inline-block mt-2 bg-stone-900 text-white px-4 py-1.5 rounded-lg text-[10px]">Go to Booking Page 📅</a>';
+                    replyText = currentLang === 'ar' ? '<a href="booking.html" class="inline-block mt-1 bg-stone-900 text-white px-3 py-1 rounded text-[10px]">الذهاب للحجز 📅</a>' : '<a href="booking.html" class="inline-block mt-1 bg-stone-900 text-white px-3 py-1 rounded text-[10px]">Book Now 📅</a>';
                 }
                 const botMsg = document.createElement('div');
                 botMsg.className = 'flex items-start gap-2';
-                botMsg.innerHTML = `<div class="bg-stone-200/80 dark:bg-stone-700 dark:text-stone-100 text-stone-800 p-3 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed">${replyText}</div>`;
+                botMsg.innerHTML = `<div class="bg-stone-200/80 dark:bg-stone-700 dark:text-stone-100 text-stone-800 p-2.5 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed">${replyText}</div>`;
                 chatMessages.appendChild(botMsg);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 500);
+            }, 400);
         }
 
-        // --- Dark Mode Functionality ---
         function toggleDarkMode() {
             if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
@@ -310,93 +295,35 @@
             document.documentElement.classList.remove('dark');
         }
 
-        // --- Multi-language Functionality (AR / EN) ---
         let currentLang = 'ar';
         const translations = {
             ar: {
-                nav_home: 'الرئيسية',
-                nav_about: 'عن العيادة',
-                nav_services: 'الخدمات',
-                nav_location: 'الموقع',
-                nav_contact: 'التواصل',
-                btn_book_consultation: 'حجز استشارة',
-                hero_title: 'نصنع الابتسامة التي تستحقها.',
-                hero_desc: 'فريق كامل متخصص في جميع مجالات طب الأسنان. نوفر لك الرعاية الكاملة في بيئة مريحة ومصممة بعناية لضمان أفضل نتائج تجميلية وصحية.',
-                hero_btn_book: 'احجز استشارتك الان',
-                hero_btn_location: 'موقع العيادة',
-                location_badge: 'الموقع',
-                location_address: 'الدقي، الجيزة - شارع الثورة',
-                services_subtitle: 'تخصصاتنا',
-                services_title: 'خدمات طبية وتجميلية متكاملة',
-                srv1_title: 'ابتسامة هوليود (Veneers)',
-                srv1_desc: 'تصميم ابتسامة طبيعية متناسقة مع ملامح الوجه باستخدام أحدث تقنيات العدسات اللاصقة.',
-                srv2_title: 'زراعة وتقويم الأسنان',
-                srv2_desc: 'حلول دائمة ومتطورة لاستعادة وظيفة الأسنان ومظهرها الطبيعي بأعلى درجات الأمان.',
-                srv3_title: 'العناية المتكاملة والوقاية',
-                srv3_desc: 'جلسات تنظيف، تبييض، وعلاج اللثة بأحدث الأجهزة لضمان صحة الفم والأسنان.',
-                footer_about: 'عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.',
-                footer_links: 'روابط سريعة',
-                footer_follow: 'تابعنا',
-                footer_rights: '© 2026 Glow Dental Clinic. جميع الحقوق محفوظة.',
-                chat_btn: 'مساعد Glow الذكي',
-                chat_header_title: 'مساعد Glow الطبي',
-                chat_header_status: 'متواجد حالياً لخدمتك',
-                chat_welcome: 'أهلاً بك في **Glow Dental Clinic**! 🦷<br/>كيف يمكنني مساعدتك اليوم؟ يمكنك اختيار إحدى الأزرار بالأسفل:',
-                chat_opt_hours: '🕒 مواعيد العمل',
-                chat_opt_location: '📍 موقع العيادة',
-                chat_opt_services: '✨ الخدمات والأسعار',
-                chat_opt_booking: '📅 حجز موعد كشف'
+                nav_home: 'الرئيسية', nav_about: 'عن العيادة', nav_services: 'الخدمات', nav_location: 'الموقع', nav_contact: 'التواصل',
+                btn_book_consultation: 'حجز استشارة', hero_title: 'نصنع الابتسامة التي تستحقها.', hero_desc: 'فريق كامل متخصص في جميع مجالات طب الأسنان. نوفر لك الرعاية الكاملة في بيئة مريحة.',
+                hero_btn_book: 'احجز استشارتك الان', hero_btn_location: 'موقع العيادة', location_badge: 'الموقع', location_address: 'الدقي، الجيزة - شارع الثورة',
+                services_subtitle: 'تخصصاتنا', services_title: 'خدمات طبية وتجميلية متكاملة', srv1_title: 'ابتسامة هوليود (Veneers)', srv1_desc: 'تصميم ابتسامة طبيعية متناسقة مع ملامح الوجه.',
+                srv2_title: 'زراعة وتقويم الأسنان', srv2_desc: 'حلول دائمة ومتطورة لاستعادة وظيفة الأسنان.', srv3_title: 'العناية المتكاملة والوقاية', srv3_desc: 'جلسات تنظيف، تبييض، وعلاج اللثة.',
+                footer_about: 'عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان.', footer_links: 'روابط سريعة', footer_follow: 'تابعنا', footer_rights: '© 2026 Glow Dental Clinic. جميع الحقوق محفوظة.',
+                chat_btn: 'مساعد Glow الذكي', chat_header_title: 'مساعد Glow الطبي', chat_header_status: 'متواجد حالياً لخدمتك', chat_welcome: 'أهلاً بك في **Glow Dental Clinic**! 🦷<br/>كيف يمكنني مساعدتك اليوم؟',
+                chat_opt_hours: '🕒 مواعيد العمل', chat_opt_location: '📍 موقع العيادة', chat_opt_services: '✨ الخدمات والأسعار', chat_opt_booking: '📅 حجز موعد'
             },
             en: {
-                nav_home: 'Home',
-                nav_about: 'About Us',
-                nav_services: 'Services',
-                nav_location: 'Location',
-                nav_contact: 'Contact',
-                btn_book_consultation: 'Book Consultation',
-                hero_title: 'Crafting the smile you deserve.',
-                hero_desc: 'A full team specialized in all dental fields. We provide complete care in a comfortable, carefully designed environment.',
-                hero_btn_book: 'Book Your Consultation Now',
-                hero_btn_location: 'Clinic Location',
-                location_badge: 'Location',
-                location_address: 'Dokki, Giza - El Thawra St',
-                services_subtitle: 'Our Specialties',
-                services_title: 'Comprehensive Dental & Cosmetic Services',
-                srv1_title: 'Hollywood Smile (Veneers)',
-                srv1_desc: 'Designing a natural, harmonious smile using state-of-the-art veneer technology.',
-                srv2_title: 'Implants & Orthodontics',
-                srv2_desc: 'Permanent and advanced solutions to restore full tooth functionality and natural appearance.',
-                srv3_title: 'Preventive Care & Hygiene',
-                srv3_desc: 'Cleaning, whitening, and gum treatments using modern dental technology.',
-                footer_about: 'Specialized clinic offering high-end dental and cosmetic care with advanced technology.',
-                footer_links: 'Quick Links',
-                footer_follow: 'Follow Us',
-                footer_rights: '© 2026 Glow Dental Clinic. All Rights Reserved.',
-                chat_btn: 'Glow Smart Assistant',
-                chat_header_title: 'Glow Medical Assistant',
-                chat_header_status: 'Online to help you',
-                chat_welcome: 'Welcome to **Glow Dental Clinic**! 🦷<br/>How can I assist you today? Select an option below:',
-                chat_opt_hours: '🕒 Working Hours',
-                chat_opt_location: '📍 Clinic Location',
-                chat_opt_services: '✨ Services & Pricing',
-                chat_opt_booking: '📅 Book Appointment'
+                nav_home: 'Home', nav_about: 'About Us', nav_services: 'Services', nav_location: 'Location', nav_contact: 'Contact',
+                btn_book_consultation: 'Book Consultation', hero_title: 'Crafting the smile you deserve.', hero_desc: 'A full team specialized in all dental fields. We provide complete care in a comfortable environment.',
+                hero_btn_book: 'Book Consultation Now', hero_btn_location: 'Clinic Location', location_badge: 'Location', location_address: 'Dokki, Giza - El Thawra St',
+                services_subtitle: 'Our Specialties', services_title: 'Comprehensive Dental Services', srv1_title: 'Hollywood Smile (Veneers)', srv1_desc: 'Designing a natural smile using veneers.',
+                srv2_title: 'Implants & Orthodontics', srv2_desc: 'Permanent solutions to restore tooth functionality.', srv3_title: 'Preventive Care', srv3_desc: 'Cleaning, whitening, and gum treatments.',
+                footer_about: 'Specialized clinic offering high-end dental care.', footer_links: 'Quick Links', footer_follow: 'Follow Us', footer_rights: '© 2026 Glow Dental Clinic. All Rights Reserved.',
+                chat_btn: 'Glow Assistant', chat_header_title: 'Glow Medical Assistant', chat_header_status: 'Online to help you', chat_welcome: 'Welcome to **Glow Dental Clinic**! 🦷<br/>How can I assist you today?',
+                chat_opt_hours: '🕒 Working Hours', chat_opt_location: '📍 Clinic Location', chat_opt_services: '✨ Services & Pricing', chat_opt_booking: '📅 Book Appointment'
             }
         };
 
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            const htmlTag = document.documentElement;
-            htmlTag.setAttribute('lang', currentLang);
-            htmlTag.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
-
+            document.documentElement.setAttribute('lang', currentLang);
+            document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
             document.getElementById('lang-btn').innerText = currentLang === 'ar' ? 'EN' : 'عربي';
-
-            const isRtl = currentLang === 'ar';
-            const optButtons = document.querySelectorAll('#chatbot-window button');
-            optButtons.forEach(btn => {
-                btn.classList.remove('text-right', 'text-left');
-                btn.classList.add(isRtl ? 'text-right' : 'text-left');
-            });
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
