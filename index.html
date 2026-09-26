@@ -32,6 +32,7 @@
 </head>
 <body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen overflow-x-hidden max-w-full">
 
+    <!-- Header -->
     <header class="w-full py-2 px-3 md:px-12 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
         <a href="index.html" class="flex items-center shrink-0">
             <img src="logo.png" alt="Glow Dental Clinic" class="h-16 sm:h-20 md:h-28 w-auto max-w-[160px] sm:max-w-[200px] md:max-w-[280px] object-contain">
@@ -64,6 +65,7 @@
         </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden fixed inset-x-0 top-[68px] md:top-[80px] bg-brand-bg/95 backdrop-blur-md border-b border-stone-200/80 shadow-xl z-40 px-6 py-6 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none">
         <nav class="flex flex-col space-y-4 text-stone-700 font-medium text-sm">
             <a href="index.html" data-i18n="navHome" class="text-stone-900 font-semibold border-r-2 ltr:border-r-0 ltr:border-l-2 border-brand-accent pr-3 ltr:pr-0 ltr:pl-3">الرئيسية</a>
@@ -74,18 +76,14 @@
         </nav>
     </div>
 
-    <!-- Hero Section مع خلفية فيديو YouTube تعمل تلقائياً مع المحرك JS API -->
+    <!-- Hero Section -->
     <section id="hero" class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-stone-950 text-white py-16 px-6">
-        
-        <!-- الحاوية المباشرة لفيديو يوتيوب -->
         <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden flex items-center justify-center">
             <div id="youtube-player" class="w-[300%] h-[300%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40 pointer-events-none"></div>
         </div>
 
-        <!-- طبقة تظليل لضمان وضوح النصوص -->
         <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-stone-950/70 z-10 pointer-events-none"></div>
 
-        <!-- المحتوى الرئيسي للـ Hero -->
         <div class="relative z-20 max-w-4xl mx-auto text-center space-y-6">
             <span class="inline-block text-xs md:text-sm tracking-widest uppercase bg-stone-800/80 border border-stone-700/80 text-brand-accent px-4 py-1.5 rounded-full backdrop-blur-md font-semibold" data-i18n="heroTagline">
                 ✨ Your Glow Is Your Signature
@@ -344,11 +342,11 @@
         </div>
     </div>
 
-    <!-- تحميل مكتبة YouTube Iframe API الرسمية -->
+    <!-- YouTube Iframe API -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
+    <!-- JavaScript Logic -->
     <script>
-        // كود تشغيل يوتيوب تلقائياً في الخلفية وبدون حظر المتصفحات
         let player;
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('youtube-player', {
@@ -391,14 +389,6 @@
                 heroBtnBook: "احجز استشارتك الان",
                 heroBtnLoc: "موقع العيادة",
                 heroLocAddress: "الدقي، الجيزة - شارع الثورة",
-                srvTag: "تخصصاتنا",
-                srvTitle: "خدمات طبية وتجميلية متكاملة",
-                srv1Title: "ابتسامة هوليود (Veneers)",
-                srv1Desc: "تصميم ابتسامة طبيعية متناسقة مع ملامح الوجه باستخدام أحدث تقنيات العدسات اللاصقة.",
-                srv2Title: "زراعة وتقويم الأسنان",
-                srv2Desc: "حلول دائمة ومتطورة لاستعادة وظيفة الأسنان ومظهرها الطبيعي بأعلى درجات الأمان.",
-                srv3Title: "العناية المتكاملة والوقاية",
-                srv3Desc: "جلسات تنظيف، تبييض، وعلاج اللثة بأحدث الأجهزة لضمان صحة الفم والأسنان.",
                 team_tag: "النخبة الطبية",
                 team_title: "فريق أطباء Glow Dental",
                 team_subtitle: "مجموعة متميزة من الاستشاريين والأخصائيين الملتزمين بتقديم أعلى مستويات الرعاية الصحية لأسنانك.",
@@ -423,6 +413,14 @@
                 doc7_name: "د. يارا عادل",
                 doc7_title: "أخصائية العلاج التحفظي وتجميل الأسنان",
                 doc7_desc: "متخصصة في الحشوات التجميلية والعلاج الوقائي وصحة الأسنان.",
+                srvTag: "تخصصاتنا",
+                srvTitle: "خدمات طبية وتجميلية متكاملة",
+                srv1Title: "ابتسامة هوليود (Veneers)",
+                srv1Desc: "تصميم ابتسامة طبيعية متناسقة مع ملامح الوجه باستخدام أحدث تقنيات العدسات اللاصقة.",
+                srv2Title: "زراعة وتقويم الأسنان",
+                srv2Desc: "حلول دائمة ومتطورة لاستعادة وظيفة الأسنان ومظهرها الطبيعي بأعلى درجات الأمان.",
+                srv3Title: "العناية المتكاملة والوقاية",
+                srv3Desc: "جلسات تنظيف، تبييض، وعلاج اللثة بأحدث الأجهزة لضمان صحة الفم والأسنان.",
                 footerDesc: "عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.",
                 quickLinksTitle: "روابط سريعة",
                 followUsTitle: "تابعنا",
@@ -452,42 +450,42 @@
                 btnBookNav: "Book Consultation",
                 heroTagline: "✨ Your Glow Is Your Signature",
                 heroTitle: "Crafting the Smile You Deserve.",
-                heroDesc: "A complete team of specialists across all dental fields. Providing total care in a comfortable environment designed to ensure optimal cosmetic and healthy outcomes.",
+                heroDesc: "A complete medical team specialized in all dental fields. Providing comprehensive care in a serene and meticulously designed environment for optimum aesthetic and oral health results.",
                 heroBtnBook: "Book Your Consultation",
                 heroBtnLoc: "Clinic Location",
-                heroLocAddress: "Dokki, Giza - Al-Thawra Street",
-                srvTag: "Our Specialties",
-                srvTitle: "Comprehensive Dental & Aesthetic Services",
-                srv1Title: "Hollywood Smile (Veneers)",
-                srv1Desc: "Designing a natural smile harmonious with your facial features using advanced veneer technologies.",
-                srv2Title: "Dental Implants & Orthodontics",
-                srv2Desc: "Advanced permanent solutions to restore natural tooth function and aesthetics safely.",
-                srv3Title: "Preventive & Complete Care",
-                srv3Desc: "Cleaning, whitening, and gum care sessions using state-of-the-art medical devices.",
+                heroLocAddress: "Dokki, Giza - Al-Thawra St.",
                 team_tag: "MEDICAL ELITE",
-                team_title: "Meet Our Specialists",
-                team_subtitle: "A highly qualified team of consultants and specialists dedicated to deliver world-class dental care.",
+                team_title: "Glow Dental Doctors Team",
+                team_subtitle: "A distinguished team of consultants and specialists committed to delivering highest standard healthcare for your teeth.",
                 doc1_name: "Dr. Adham Mohamed",
-                doc1_title: "Founder & Clinic Director",
-                doc1_desc: "Leading our clinical excellence and ensuring premium patient care standards.",
+                doc1_title: "Clinic Founder & Director",
+                doc1_desc: "General supervision ensuring top quality standards and leading medical care.",
                 doc2_name: "Dr. Ahmed Ezzat",
-                doc2_title: "M.Sc. Periodontology & Dental Implants",
-                doc2_desc: "Specialized in advanced periodontal therapy and precise dental implant surgery.",
+                doc2_title: "MSc in Periodontics & Dental Implants",
+                doc2_desc: "Specialized in complex gum treatments and precise dental implants.",
                 doc3_name: "Dr. Mohamed Ali",
-                doc3_title: "M.Sc. Prosthodontics & Implants - Cairo University",
-                doc3_desc: "Expert in aesthetic restorations, fixed prosthetics, and implant solutions.",
+                doc3_title: "MSc in Prosthodontics & Implants - Cairo University",
+                doc3_desc: "Expert in fixed prosthetics, cosmetic veneers, and advanced restorative solutions.",
                 doc4_name: "Dr. Noura Saleh",
-                doc4_title: "Ph.D. Orthodontics - Cairo University",
-                doc4_desc: "Specialist in clear aligners and conventional orthodontics for perfectly aligned smiles.",
-                doc5_name: "Dr. Yumna Elqassas",
+                doc4_title: "PhD in Orthodontics - Cairo University",
+                doc4_desc: "Specialized in clear and traditional braces for complete smile alignment.",
+                doc5_name: "Dr. Yumna El Qassas",
                 doc5_title: "Italian Fellowship in Implantology",
-                doc5_desc: "Specialist in modern dental implants and cosmetic restorations.",
+                doc5_desc: "Specialist in dental implants and cosmetics adhering to latest European techniques.",
                 doc6_name: "Dr. Ibrahim Attia",
                 doc6_title: "Italian Fellowship in Implantology",
-                doc6_desc: "Expert in complex oral surgery, dental implants, and full-mouth rehabilitation.",
+                doc6_desc: "Specialist in oral surgery, dental implants, and advanced jaw rehabilitation.",
                 doc7_name: "Dr. Yara Adel",
-                doc7_title: "Restorative & Cosmetic Dentistry Specialist",
-                doc7_desc: "Focused on aesthetic composite restorations, preventive dentistry, and smile design.",
+                doc7_title: "Restorative & Aesthetic Dentistry Specialist",
+                doc7_desc: "Specialized in aesthetic fillings, preventative care, and tooth conservation.",
+                srvTag: "OUR SPECIALTIES",
+                srvTitle: "Integrated Medical & Aesthetic Services",
+                srv1Title: "Hollywood Smile (Veneers)",
+                srv1Desc: "Designing natural smiles tailored to facial features using state-of-the-art contact veneers.",
+                srv2Title: "Implants & Orthodontics",
+                srv2Desc: "Permanent advanced solutions restoring function and natural appearance with ultimate safety.",
+                srv3Title: "Complete Oral Care & Prevention",
+                srv3Desc: "Prophylaxis, whitening, and periodontal treatment sessions utilizing cutting-edge equipment.",
                 footerDesc: "Specialized clinic offering high-end dental cosmetic and medical care with cutting-edge technology.",
                 quickLinksTitle: "Quick Links",
                 followUsTitle: "Follow Us",
@@ -509,10 +507,10 @@
             }
         };
 
-        let currentLang = 'ar';
+        let currentLang = localStorage.getItem('preferredLang') || 'ar';
 
-        function toggleLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+        function applyLanguage(lang) {
+            currentLang = lang;
             document.documentElement.lang = currentLang;
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
@@ -533,6 +531,13 @@
             applyTranslations(currentLang);
         }
 
+        function toggleLanguage() {
+            const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('preferredLang', nextLang);
+            window.scrollTo(0, window.scrollY);
+            applyLanguage(nextLang);
+        }
+
         function applyTranslations(lang) {
             const t = translations[lang];
             document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -549,6 +554,10 @@
                 document.title = t.pageTitle;
             }
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applyLanguage(currentLang);
+        });
 
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
@@ -572,8 +581,8 @@
         function sendQuickReply(key) {
             const optNum = key === 'workingHours' ? 1 : key === 'clinicLocation' ? 2 : key === 'servicesPrices' ? 3 : 4;
             const optionText = translations[currentLang][`chatOpt${optNum}`];
-            const chatMessages = document.getElementById('chat-messages');
 
+            const chatMessages = document.getElementById('chat-messages');
             const userMsg = document.createElement('div');
             userMsg.className = 'flex items-end justify-end gap-2';
             userMsg.innerHTML = `<div class="bg-stone-900 text-white p-3 rounded-2xl ${currentLang === 'ar' ? 'rounded-tl-none' : 'rounded-tr-none'} max-w-[85%] leading-relaxed">${optionText}</div>`;

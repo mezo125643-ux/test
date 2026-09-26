@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title id="page-title" data-i18n="pageTitle">Glow Dental Clinic | حجز استشارة</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,11 +34,12 @@
 </head>
 <body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen overflow-x-hidden max-w-full">
 
+    <!-- Header -->
     <header class="w-full py-2 px-3 md:px-12 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
         <a href="index.html" class="flex items-center shrink-0">
             <img src="logo.png" alt="Glow Dental Clinic" class="h-16 sm:h-20 md:h-28 w-auto max-w-[160px] sm:max-w-[200px] md:max-w-[280px] object-contain">
         </a>
-        
+
         <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-stone-600 items-center" id="desktop-nav">
             <a href="index.html" data-i18n="navHome" class="hover:text-stone-900 transition-colors">الرئيسية</a>
             <a href="about.html" data-i18n="navAbout" class="hover:text-stone-900 transition-colors">عن العيادة</a>
@@ -44,8 +47,9 @@
             <a href="location.html" data-i18n="navLocation" class="hover:text-stone-900 transition-colors">الموقع</a>
             <a href="contact.html" data-i18n="navContact" class="hover:text-stone-900 transition-colors">التواصل</a>
         </nav>
-        
+
         <div class="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0">
+            <!-- زر تحويل اللغة -->
             <button onclick="toggleLanguage()" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-stone-300 hover:border-brand-accent text-xs font-semibold text-stone-700 hover:text-stone-900 transition-all bg-white/50 backdrop-blur-sm shadow-sm shrink-0">
                 🌐 <span id="lang-btn-text">EN</span>
             </button>
@@ -62,6 +66,7 @@
         </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden fixed inset-x-0 top-[68px] md:top-[80px] bg-brand-bg/95 backdrop-blur-md border-b border-stone-200/80 shadow-xl z-40 px-6 py-6 transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none">
         <nav class="flex flex-col space-y-4 text-stone-700 font-medium text-sm">
             <a href="index.html" data-i18n="navHome" class="hover:text-stone-900 pr-3 ltr:pr-0 ltr:pl-3 transition-colors">الرئيسية</a>
@@ -72,58 +77,63 @@
         </nav>
     </div>
 
-    <section class="bg-stone-900 text-white py-14 px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-light mb-2" data-i18n="bookTitle">حجز موعد استشارة</h2>
-        <p class="text-stone-400 text-sm max-w-md mx-auto font-light" data-i18n="bookSubtitle">خطوتك الأولى نحو ابتسامة مشرقة وصحية.</p>
-    </section>
-
-    <main class="py-16 px-6 md:px-16 max-w-3xl mx-auto w-full flex-grow">
-        <form class="bg-brand-card/50 p-6 md:p-12 rounded-3xl border border-stone-200/80 shadow-sm space-y-6">
-            <div>
-                <label class="block text-sm font-medium text-stone-800 mb-2" data-i18n="lblFullName">الاسم بالكامل</label>
-                <input type="text" data-i18n-ph="phFullName" placeholder="أدخل اسمك الكامل" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm" required>
+    <!-- Booking Form Section -->
+    <main class="py-16 px-6 md:px-16 max-w-3xl mx-auto flex-grow w-full">
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-stone-200/80 space-y-8">
+            <div class="text-center space-y-3">
+                <span class="text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 rounded-full text-stone-700 font-semibold inline-block" data-i18n="bookingTag">حجز المواعيد</span>
+                <h2 class="text-2xl md:text-3xl font-light text-stone-900" data-i18n="bookingTitle">احجز استشارتك الطبية الآن</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light max-w-md mx-auto" data-i18n="bookingDesc">يرجى ملء البيانات التالية وسنقوم بالتواصل معك لتأكيد موعد الكشف مباشرة.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-medium text-stone-800 mb-2" data-i18n="lblPhone">رقم الهاتف</label>
-                    <input type="tel" placeholder="01xxxxxxxxx" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm text-right ltr:text-left" required>
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert(currentLang === 'ar' ? 'تم استلام طلبك بنجاح! وسنتواصل معك قريباً.' : 'Your request has been received! We will contact you soon.');">
+                <div class="space-y-2">
+                    <label class="block text-xs font-semibold text-stone-700" data-i18n="labelName">الاسم بالكامل</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:border-brand-accent bg-stone-50/50 text-sm" placeholder="" data-i18n-ph="phName">
                 </div>
-                <div>
-                    <label class="block text-sm font-medium text-stone-800 mb-2" data-i18n="lblService">الخدمة المطلوبة</label>
-                    <select class="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm text-stone-700">
-                        <option data-i18n="optSrv1">استشارة والكشف عام</option>
-                        <option data-i18n="optSrv2">ابتسامة هوليود (Veneers)</option>
-                        <option data-i18n="optSrv3">زراعة الأسنان</option>
-                        <option data-i18n="optSrv4">تقويم الأسنان</option>
-                        <option data-i18n="optSrv5">تنظيف وتبييض الأسنان</option>
-                    </select>
-                </div>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-medium text-stone-800 mb-2" data-i18n="lblDate">التاريخ المفضل</label>
-                    <input type="date" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm text-stone-700" required>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="block text-xs font-semibold text-stone-700" data-i18n="labelPhone">رقم الهاتف / الواتساب</label>
+                        <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:border-brand-accent bg-stone-50/50 text-sm" placeholder="010XXXXXXXX">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-xs font-semibold text-stone-700" data-i18n="labelService">الخدمة المطلوب استشارتها</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:border-brand-accent bg-stone-50/50 text-sm">
+                            <option value="hollywood" data-i18n="optService1">ابتسامة هوليود والتجميل</option>
+                            <option value="implants" data-i18n="optService2">زراعة الأسنان</option>
+                            <option value="ortho" data-i18n="optService3">تقويم الأسنان</option>
+                            <option value="whitening" data-i18n="optService4">تبييض وتنظيف الأسنان</option>
+                            <option value="checkup" data-i18n="optService5">كشف واستشارة عامة</option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-medium text-stone-800 mb-2" data-i18n="lblTime">الوقت المفضل</label>
-                    <select class="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm text-stone-700">
-                        <option data-i18n="optTime1">الفترة المسائية (4 - 7 مساءً)</option>
-                        <option data-i18n="optTime2">الفترة الليلية (7 - 10 مساءً)</option>
-                    </select>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="block text-xs font-semibold text-stone-700" data-i18n="labelDate">الموعد المفضل</label>
+                        <input type="date" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:border-brand-accent bg-stone-50/50 text-sm">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-xs font-semibold text-stone-700" data-i18n="labelTime">الوقت المناسب</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:border-brand-accent bg-stone-50/50 text-sm">
+                            <option value="afternoon" data-i18n="optTime1">من 2:00 ظهراً إلى 5:00 مساءً</option>
+                            <option value="evening" data-i18n="optTime2">من 5:00 مساءً إلى 8:00 مساءً</option>
+                            <option value="night" data-i18n="optTime3">من 8:00 مساءً إلى 10:00 مساءً</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <label class="block text-sm font-medium text-stone-800 mb-2" data-i18n="lblNotes">ملاحظات أو تفاصيل إضافية</label>
-                <textarea rows="3" data-i18n-ph="phNotes" placeholder="اكتب أي تفاصيل تود إخبرنا بها..." class="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 text-sm"></textarea>
-            </div>
+                <div class="space-y-2">
+                    <label class="block text-xs font-semibold text-stone-700" data-i18n="labelNotes">ملاحظات إضافية (اختياري)</label>
+                    <textarea rows="3" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:border-brand-accent bg-stone-50/50 text-sm"></textarea>
+                </div>
 
-            <button type="submit" data-i18n="btnSubmitBook" class="w-full bg-stone-900 text-white py-4 rounded-xl text-sm font-medium hover:bg-stone-800 transition-all shadow-md">
-                تأكيد طلب الحجز
-            </button>
-        </form>
+                <button type="submit" data-i18n="btnSubmit" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-medium py-3.5 rounded-xl transition-all shadow-md">
+                    تأكيد طلب الحجز
+                </button>
+            </form>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -177,7 +187,7 @@
         <span class="absolute -z-10 inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
     </a>
 
-    <!-- AI Chatbot -->
+    <!-- AI Chatbot Container -->
     <div id="chatbot-container" class="fixed bottom-6 right-4 ltr:right-auto ltr:left-4 md:right-6 md:ltr:left-6 z-50">
         <button id="chatbot-toggle" onclick="toggleChatbot()" class="flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-3.5 py-3 md:px-4 md:py-3.5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105">
             <span class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -231,6 +241,7 @@
         </div>
     </div>
 
+    <!-- JavaScript Logic -->
     <script>
         const translations = {
             ar: {
@@ -241,24 +252,25 @@
                 navLocation: "الموقع",
                 navContact: "التواصل",
                 btnBookNav: "حجز استشارة",
-                bookTitle: "حجز موعد استشارة",
-                bookSubtitle: "خطوتك الأولى نحو ابتسامة مشرقة وصحية.",
-                lblFullName: "الاسم بالكامل",
-                phFullName: "أدخل اسمك الكامل",
-                lblPhone: "رقم الهاتف",
-                lblService: "الخدمة المطلوبة",
-                optSrv1: "استشارة والكشف عام",
-                optSrv2: "ابتسامة هوليود (Veneers)",
-                optSrv3: "زراعة الأسنان",
-                optSrv4: "تقويم الأسنان",
-                optSrv5: "تنظيف وتبييض الأسنان",
-                lblDate: "التاريخ المفضل",
-                lblTime: "الوقت المفضل",
-                optTime1: "الفترة المسائية (4 - 7 مساءً)",
-                optTime2: "الفترة الليلية (7 - 10 مساءً)",
-                lblNotes: "ملاحظات أو تفاصيل إضافية",
-                phNotes: "اكتب أي تفاصيل تود إخبارنا بها...",
-                btnSubmitBook: "تأكيد طلب الحجز",
+                bookingTag: "حجز المواعيد",
+                bookingTitle: "احجز استشارتك الطبية الآن",
+                bookingDesc: "يرجى ملء البيانات التالية وسنقوم بالتواصل معك لتأكيد موعد الكشف مباشرة.",
+                labelName: "الاسم بالكامل",
+                phName: "أدخل اسمك الثلاثي",
+                labelPhone: "رقم الهاتف / الواتساب",
+                labelService: "الخدمة المطلوب استشارتها",
+                optService1: "ابتسامة هوليود والتجميل",
+                optService2: "زراعة الأسنان",
+                optService3: "تقويم الأسنان",
+                optService4: "تبييض وتنظيف الأسنان",
+                optService5: "كشف واستشارة عامة",
+                labelDate: "الموعد المفضل",
+                labelTime: "الوقت المناسب",
+                optTime1: "من 2:00 ظهراً إلى 5:00 مساءً",
+                optTime2: "من 5:00 مساءً إلى 8:00 مساءً",
+                optTime3: "من 8:00 مساءً إلى 10:00 مساءً",
+                labelNotes: "ملاحظات إضافية (اختياري)",
+                btnSubmit: "تأكيد طلب الحجز",
                 footerDesc: "عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.",
                 quickLinksTitle: "روابط سريعة",
                 followUsTitle: "تابعنا",
@@ -286,24 +298,25 @@
                 navLocation: "Location",
                 navContact: "Contact",
                 btnBookNav: "Book Consultation",
-                bookTitle: "Book Consultation Appointment",
-                bookSubtitle: "Your first step towards a bright and healthy smile.",
-                lblFullName: "Full Name",
-                phFullName: "Enter your full name",
-                lblPhone: "Phone Number",
-                lblService: "Required Service",
-                optSrv1: "General Consultation & Checkup",
-                optSrv2: "Hollywood Smile (Veneers)",
-                optSrv3: "Dental Implants",
-                optSrv4: "Orthodontics",
-                optSrv5: "Teeth Cleaning & Whitening",
-                lblDate: "Preferred Date",
-                lblTime: "Preferred Time",
-                optTime1: "Evening Shift (4 PM - 7 PM)",
-                optTime2: "Night Shift (7 PM - 10 PM)",
-                lblNotes: "Notes or Additional Details",
-                phNotes: "Write any details you wish to tell us...",
-                btnSubmitBook: "Confirm Booking Request",
+                bookingTag: "APPOINTMENT BOOKING",
+                bookingTitle: "Book Your Medical Consultation",
+                bookingDesc: "Please fill in the form below and we will contact you immediately to confirm your appointment.",
+                labelName: "Full Name",
+                phName: "Enter your full name",
+                labelPhone: "Phone / WhatsApp Number",
+                labelService: "Selected Service",
+                optService1: "Hollywood Smile & Cosmetics",
+                optService2: "Dental Implants",
+                optService3: "Orthodontics",
+                optService4: "Teeth Whitening & Cleaning",
+                optService5: "General Checkup & Consultation",
+                labelDate: "Preferred Date",
+                labelTime: "Preferred Time",
+                optTime1: "2:00 PM - 5:00 PM",
+                optTime2: "5:00 PM - 8:00 PM",
+                optTime3: "8:00 PM - 10:00 PM",
+                labelNotes: "Additional Notes (Optional)",
+                btnSubmit: "Confirm Booking Request",
                 footerDesc: "Specialized clinic offering high-end dental cosmetic and medical care with cutting-edge technology.",
                 quickLinksTitle: "Quick Links",
                 followUsTitle: "Follow Us",
@@ -325,14 +338,13 @@
             }
         };
 
-        let currentLang = 'ar';
+        // قراءة اللغة المحفوظة أو استخدام العربية كافتراضي
+        let currentLang = localStorage.getItem('preferredLang') || 'ar';
 
-        function toggleLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+        function applyLanguage(lang) {
+            currentLang = lang;
             document.documentElement.lang = currentLang;
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-
-            window.scrollTo(0, window.scrollY);
 
             const desktopNav = document.getElementById('desktop-nav');
             if (desktopNav) {
@@ -351,6 +363,13 @@
             applyTranslations(currentLang);
         }
 
+        function toggleLanguage() {
+            const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('preferredLang', nextLang);
+            window.scrollTo(0, window.scrollY);
+            applyLanguage(nextLang);
+        }
+
         function applyTranslations(lang) {
             const t = translations[lang];
             document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -366,7 +385,7 @@
                     el.placeholder = t[key];
                 }
             });
-            
+
             const pageTitleEl = document.getElementById('page-title');
             if (pageTitleEl && t.pageTitle) {
                 pageTitleEl.textContent = t.pageTitle;
@@ -375,11 +394,16 @@
             }
         }
 
+        // تطبيق اللغة عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            applyLanguage(currentLang);
+        });
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
             const isOpen = !menu.classList.contains('pointer-events-none');
-            
+
             if (isOpen) {
                 menu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
                 if(icon) icon.classList.remove('rotate-90');
