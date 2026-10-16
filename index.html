@@ -118,7 +118,6 @@
                 حجز استشارة
             </a>
 
-            <!-- زر القائمة للهاتف -->
             <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden p-1.5 rounded-lg text-stone-800 hover:bg-stone-200/60 focus:outline-none transition-colors shrink-0 flex items-center justify-center">
                 <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -143,10 +142,13 @@
 
         <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden select-none">
             <video 
+                id="hero-bg-video"
                 autoplay 
                 muted 
                 loop 
                 playsinline 
+                webkit-playsinline
+                x5-playsinline
                 preload="auto"
                 class="w-full h-full object-cover opacity-40 scale-105 pointer-events-none">
                 <source src="hero-video.mp4" type="video/mp4">
