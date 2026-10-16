@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title id="page-title" data-i18n="pageTitle">Glow Dental Clinic | الخدمات والفرع</title>
     
+    <!-- وسوم تحسين محركات البحث SEO -->
+    <meta name="description" content="خدمات Glow Dental Clinic: زراعة وتقويم الأسنان، ابتسامة هوليود، عدسات الفينير، تبييض الأسنان، علاج الجذور وطب أسنان الأطفال بأحدث التقنيات.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://glowdentalclinic.com/services.html">
+
+    <!-- بطاقات السوشيال ميديا -->
+    <meta property="og:title" content="Glow Dental Clinic | خدمات طب وتجميل الأسنان">
+    <meta property="og:description" content="تعرف على باقة خدمات العناية وتجميل وزراعة الأسنان في Glow Dental Clinic.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glowdentalclinic.com/services.html">
+    <meta property="og:image" content="https://glowdentalclinic.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Schema.org - قائمة الخدمات الطبية -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Glow Dental Clinic - الخدمات",
+      "url": "https://glowdentalclinic.com/services.html",
+      "medicalSpecialty": "Dentistry",
+      "availableService": [
+        {"@type": "MedicalProcedure", "name": "Dental Implants"},
+        {"@type": "MedicalProcedure", "name": "Hollywood Smile Veneers"},
+        {"@type": "MedicalProcedure", "name": "Teeth Whitening"},
+        {"@type": "MedicalProcedure", "name": "Orthodontics"},
+        {"@type": "MedicalProcedure", "name": "Root Canal Treatment"}
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -32,7 +63,17 @@
         }
     </script>
 </head>
-<body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen overflow-x-hidden max-w-full">
+<body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen overflow-x-hidden max-w-full relative">
+
+    <!-- خلفية الثيم ثلاثي الأبعاد باللون الأبيض والرمادي الناصع -->
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden w-full h-full select-none bg-brand-bg">
+        <img 
+            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop" 
+            alt="3D Fluid White Background" 
+            class="w-full h-full object-cover object-left opacity-35 filter grayscale brightness-125 contrast-110 mix-blend-multiply"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#FAF7F5]/40 via-transparent to-[#FAF7F5]/60"></div>
+    </div>
 
     <!-- Header -->
     <header class="w-full py-2 px-3 md:px-12 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
@@ -49,7 +90,6 @@
         </nav>
         
         <div class="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0">
-            <!-- زر تحويل اللغة -->
             <button onclick="toggleLanguage()" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-stone-300 hover:border-brand-accent text-xs font-semibold text-stone-700 hover:text-stone-900 transition-all bg-white/50 backdrop-blur-sm shadow-sm shrink-0">
                 🌐 <span id="lang-btn-text">EN</span>
             </button>
@@ -58,7 +98,6 @@
                 حجز استشارة
             </a>
 
-            <!-- زر الهامبرجر ثابت الظهور على الموبايل -->
             <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden p-1.5 rounded-lg text-stone-800 hover:bg-stone-200/60 focus:outline-none transition-colors shrink-0 flex items-center justify-center">
                 <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -78,83 +117,119 @@
         </nav>
     </div>
 
-    <!-- Page Header -->
+    <!-- Page Header (تم ضبط H1 لـ SEO) -->
     <section class="py-12 md:py-16 px-6 md:px-16 max-w-7xl mx-auto text-center space-y-4 overflow-hidden">
         <span class="text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 rounded-full text-stone-700 font-semibold" data-i18n="pageTagline">خدماتنا الطبية والتجميلية</span>
-        <h2 class="text-3xl md:text-5xl font-light text-stone-900" data-i18n="pageTitleHeading">رعاية متكاملة لابتسامتك</h2>
+        <h1 class="text-3xl md:text-5xl font-light text-stone-900" data-i18n="pageTitleHeading">رعاية متكاملة لابتسامتك</h1>
         <p class="text-stone-600 font-light max-w-xl mx-auto text-xs md:text-sm leading-relaxed" data-i18n="pageSubtitle">
             نعتمد على أحدث التقنيات وأجود المواد العالمية لتقديم كافة المعالجات والحلول التجميلية تحت إشراف نخبة من الأطباء.
         </p>
     </section>
 
     <!-- Services Grid -->
-    <section class="py-12 bg-stone-100/60 px-6 md:px-16 flex-1 overflow-hidden">
+    <section class="py-12 bg-stone-100/60 backdrop-blur-[2px] px-6 md:px-16 flex-1 overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             
-            <!-- Service 1 -->
-            <div class="bg-brand-bg p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
-                <span class="text-3xl block">🦷</span>
-                <h3 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srv1Title">تقويم الأسنان (Orthodontics)</h3>
-                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv1Desc">
-                    حلول تقويم الأسنان المعدني والشفاف (Invisalign) لتعديل استقامة الأسنان وتحسين الإطباق للكبار والأطفال.
-                </p>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="bg-brand-bg p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
                 <span class="text-3xl block">⚙️</span>
-                <h3 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srv2Title">زراعة الأسنان (Dental Implants)</h3>
-                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv2Desc">
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvImplantsTitle">زراعة الأسنان (Dental Implants)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvImplantsDesc">
                     استبدال الأسنان المفقودة بزراعات دقيقة وآمنة بتقنية التخطيط الرقمي لاستعادة وظيفة وشكل الفك الطبيعي.
                 </p>
             </div>
 
-            <!-- Service 3 -->
-            <div class="bg-brand-bg p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
-                <span class="text-3xl block">🧸</span>
-                <h3 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srv3Title">طب أسنان الأطفال (Pediatric Dentistry)</h3>
-                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv3Desc">
-                    عناية فائقة وخاصة بأطفالك في بيئة آمنة تمنع الخوف، وتشمل وقاية الأسنان وعلاج التسوس المبكر.
-                </p>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="bg-brand-bg p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
                 <span class="text-3xl block">✨</span>
-                <h3 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srv4Title">التجميل والفينير (Veneers & Cosmetic)</h3>
-                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv4Desc">
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvVeneersTitle">الفينير والتجميل (Veneers)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvVeneersDesc">
                     تصميم ابتسامة هوليود باستخدام عدسات الفينير والايماكس فائقة الدقة لتحقيق مظهر طبيعي وجذاب.
                 </p>
             </div>
 
-            <!-- Service 5 -->
-            <div class="bg-brand-bg p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
-                <span class="text-3xl block">🌱</span>
-                <h3 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srv5Title">علاج الجذور والحشوات التجميلية</h3>
-                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv5Desc">
-                    إنقاذ الأسنان المتضررة بعلاج جذور بدون ألم باستخدام أحدث الأجهزة، مع حشوات تجميلية تماثل لون السن.
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">💎</span>
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvWhiteningTitle">تبييض الأسنان (Teeth Whitening)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvWhiteningDesc">
+                    إزالة التصبغات والبقع للحصول على ابتسامة أسرع وأكثر إشراقاً وبأمان تام على طبقة المينا.
                 </p>
             </div>
 
-            <!-- Service 6 / CTA Card -->
-            <div class="bg-brand-card p-6 md:p-8 rounded-2xl border border-stone-300/80 flex flex-col justify-between space-y-4">
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🎨</span>
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvFillingsTitle">الحشوات التجميلية (Cosmetic Fillings)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvFillingsDesc">
+                    حشوات تجميلية تماثل لون الأسنان الطبيعي تماماً لعلاج التسوس وتجميل الفراغات بدقة متناهية.
+                </p>
+            </div>
+
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🌱</span>
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvRootCanalTitle">علاج الجذور والأعصاب (Root Canal)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvRootCanalDesc">
+                    إنقاذ الأسنان المتضررة بعلاج جذور دقيق وبدون ألم باستخدام أحدث تقنيات التنظيف والتعقيم.
+                </p>
+            </div>
+
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🏥</span>
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvRestorativeTitle">الترميمات والترميم الطبي (Restorative)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvRestorativeDesc">
+                    إصلاح الأسنان التالفة أو المكسورة باستعادة بنيتها القوية ووظيفتها الطبيعية بأعلى جودة.
+                </p>
+            </div>
+
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">👑</span>
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvProsthoTitle">التركيبات الثابتة والمتحركة (Prosthodontics)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvProsthoDesc">
+                    تصميم التركيبات والجسور والطرابيش لتعويض الأسنان وتحسين الوظيفة الميكانيكية والشكل الجمالي.
+                </p>
+            </div>
+
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🦷</span>
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvOrthoTitle">تقويم الأسنان (Orthodontics)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvOrthoDesc">
+                    حلول تقويم الأسنان المعدني والشفاف لتعديل استقامة الأسنان وتحسين الإطباق للكبار والأطفال.
+                </p>
+            </div>
+
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🧸</span>
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvPediatricTitle">طب أسنان الأطفال (Pediatric)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvPediatricDesc">
+                    عناية فائقة وخاصة بأطفالك في بيئة آمنة تمنع الخوف، وتشمل وقاية الأسنان وعلاج التسوس المبكر.
+                </p>
+            </div>
+
+            <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-all space-y-4">
+                <span class="text-3xl block">🩺</span>
+                <h2 class="text-lg md:text-xl font-medium text-stone-800" data-i18n="srvPerioTitle">علاج اللثة والأنسجة (Periodontal)</h2>
+                <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvPerioDesc">
+                    تنظيف التكلسات الجيرية وعلاج التهابات اللثة والأنسجة المحيطة بالأسنان لحمايتها من التراجع.
+                </p>
+            </div>
+
+            <div class="bg-brand-card/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-300/80 flex flex-col justify-between space-y-4 lg:col-span-2">
                 <div>
                     <span class="text-3xl block">📅</span>
-                    <h3 class="text-lg md:text-xl font-medium text-stone-800 mb-2" data-i18n="srv6Title">استشارة طبية متخصصة</h3>
-                    <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv6Desc">
-                        احجز كشفك الآن ليقوم فريقنا بتقييم حالتك ووضع خطة العلاج المناسبة.
+                    <h2 class="text-lg md:text-xl font-medium text-stone-800 mb-2" data-i18n="srvCtaTitle">استشارة طبية متخصصة</h2>
+                    <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srvCtaDesc">
+                        احجز كشفك الآن ليقوم فريقنا بتقييم حالتك ووضع خطة العلاج المناسبة لابتسامتك.
                     </p>
                 </div>
-                <a href="booking.html" data-i18n="srv6Btn" class="inline-block text-center bg-stone-900 text-white py-3 px-6 rounded-full text-xs hover:bg-stone-800 transition-all">
-                    احجز موعدك الآن
-                </a>
+                <div>
+                    <a href="booking.html" data-i18n="srvCtaBtn" class="inline-block text-center bg-stone-900 text-white py-3 px-8 rounded-full text-xs hover:bg-stone-800 transition-all">
+                        احجز موعدك الآن
+                    </a>
+                </div>
             </div>
 
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-stone-900 text-white px-6 md:px-16 text-sm mt-auto border-t border-stone-800 overflow-hidden">
+    <footer class="py-12 bg-stone-900 text-white px-6 md:px-16 text-sm mt-auto border-t border-stone-800 overflow-hidden relative z-10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
             <div class="space-y-3">
                 <p class="font-bold text-xl tracking-wider uppercase">Glow Dental Clinic</p>
@@ -272,19 +347,29 @@
                 pageTagline: "خدماتنا الطبية والتجميلية",
                 pageTitleHeading: "رعاية متكاملة لابتسامتك",
                 pageSubtitle: "نعتمد على أحدث التقنيات وأجود المواد العالمية لتقديم كافة المعالجات والحلول التجميلية تحت إشراف نخبة من الأطباء.",
-                srv1Title: "تقويم الأسنان (Orthodontics)",
-                srv1Desc: "حلول تقويم الأسنان المعدني والشفاف (Invisalign) لتعديل استقامة الأسنان وتحسين الإطباق للكبار والأطفال.",
-                srv2Title: "زراعة الأسنان (Dental Implants)",
-                srv2Desc: "استبدال الأسنان المفقودة بزراعات دقيقة وآمنة بتقنية التخطيط الرقمي لاستعادة وظيفة وشكل الفك الطبيعي.",
-                srv3Title: "طب أسنان الأطفال (Pediatric Dentistry)",
-                srv3Desc: "عناية فائقة وخاصة بأطفالك في بيئة آمنة تمنع الخوف، وتشمل وقاية الأسنان وعلاج التسوس المبكر.",
-                srv4Title: "التجميل والفينير (Veneers & Cosmetic)",
-                srv4Desc: "تصميم ابتسامة هوليود باستخدام عدسات الفينير والايماكس فائقة الدقة لتحقيق مظهر طبيعي وجذاب.",
-                srv5Title: "علاج الجذور والحشوات التجميلية",
-                srv5Desc: "إنقاذ الأسنان المتضررة بعلاج جذور بدون ألم باستخدام أحدث الأجهزة، مع حشوات تجميلية تماثل لون السن.",
-                srv6Title: "استشارة طبية متخصصة",
-                srv6Desc: "احجز كشفك الآن ليقوم فريقنا بتقييم حالتك ووضع خطة العلاج المناسبة.",
-                srv6Btn: "احجز موعدك الآن",
+                srvImplantsTitle: "زراعة الأسنان (Dental Implants)",
+                srvImplantsDesc: "استبدال الأسنان المفقودة بزراعات دقيقة وآمنة بتقنية التخطيط الرقمي لاستعادة وظيفة وشكل الفك الطبيعي.",
+                srvVeneersTitle: "الفينير والتجميل (Veneers)",
+                srvVeneersDesc: "تصميم ابتسامة هوليود باستخدام عدسات الفينير والايماكس فائقة الدقة لتحقيق مظهر طبيعي وجذاب.",
+                srvWhiteningTitle: "تبييض الأسنان (Teeth Whitening)",
+                srvWhiteningDesc: "إزالة التصبغات والبقع للحصول على ابتسامة أسرع وأكثر إشراقاً وبأمان تام على طبقة المينا.",
+                srvFillingsTitle: "الحشوات التجميلية (Cosmetic Fillings)",
+                srvFillingsDesc: "حشوات تجميلية تماثل لون الأسنان الطبيعي تماماً لعلاج التسوس وتجميل الفراغات بدقة متناهية.",
+                srvRootCanalTitle: "علاج الجذور والأعصاب (Root Canal)",
+                srvRootCanalDesc: "إنقاذ الأسنان المتضررة بعلاج جذور دقيق وبدون ألم باستخدام أحدث تقنيات التنظيف والتعقيم.",
+                srvRestorativeTitle: "الترميمات والترميم الطبي (Restorative)",
+                srvRestorativeDesc: "إصلاح الأسنان التالفة أو المكسورة باستعادة بنيتها القوية ووظيفتها الطبيعية بأعلى جودة.",
+                srvProsthoTitle: "التركيبات الثابتة والمتحركة (Prosthodontics)",
+                srvProsthoDesc: "تصميم التركيبات والجسور والطرابيش لتعويض الأسنان وتحسين الوظيفة الميكانيكية والشكل الجمالي.",
+                srvOrthoTitle: "تقويم الأسنان (Orthodontics)",
+                srvOrthoDesc: "حلول تقويم الأسنان المعدني والشفاف لتعديل استقامة الأسنان وتحسين الإطباق للكبار والأطفال.",
+                srvPediatricTitle: "طب أسنان الأطفال (Pediatric)",
+                srvPediatricDesc: "عناية فائقة وخاصة بأطفالك في بيئة آمنة تمنع الخوف، وتشمل وقاية الأسنان وعلاج التسوس المبكر.",
+                srvPerioTitle: "علاج اللثة والأنسجة (Periodontal)",
+                srvPerioDesc: "تنظيف التكلسات الجيرية وعلاج التهابات اللثة والأنسجة المحيطة بالأسنان لحمايتها من التراجع.",
+                srvCtaTitle: "استشارة طبية متخصصة",
+                srvCtaDesc: "احجز كشفك الآن ليقوم فريقنا بتقييم حالتك ووضع خطة العلاج المناسبة لابتسامتك.",
+                srvCtaBtn: "احجز موعدك الآن",
                 footerDesc: "عيادة تخصصية تقدم أفضل خدمات رعاية وتجميل الأسنان بأحدث التقنيات الطبية.",
                 quickLinksTitle: "روابط سريعة",
                 followUsTitle: "تابعنا",
@@ -315,19 +400,29 @@
                 pageTagline: "Medical & Aesthetic Services",
                 pageTitleHeading: "Comprehensive Care for Your Smile",
                 pageSubtitle: "We utilize cutting-edge technology and premium materials to deliver top-tier treatments and aesthetic solutions under specialist care.",
-                srv1Title: "Orthodontics",
-                srv1Desc: "Metal and clear aligner (Invisalign) solutions to align teeth and improve bite function for adults and children.",
-                srv2Title: "Dental Implants",
-                srv2Desc: "Replacing missing teeth with precise, safe implants using digital planning to restore full jaw function and appearance.",
-                srv3Title: "Pediatric Dentistry",
-                srv3Desc: "Specialized, fear-free dental care for children, focusing on preventive treatments and early decay management.",
-                srv4Title: "Veneers & Cosmetics",
-                srv4Desc: "Designing Hollywood smiles with ultra-precise Veneers and E-max lenses for a stunning, natural appearance.",
-                srv5Title: "Root Canal & Composite Fillings",
-                srv5Desc: "Painless root canal treatments using modern technology, complemented by natural tooth-colored fillings.",
-                srv6Title: "Specialized Consultation",
-                srv6Desc: "Book your appointment now for a comprehensive assessment and customized treatment plan.",
-                srv6Btn: "Book Appointment Now",
+                srvImplantsTitle: "Dental Implants",
+                srvImplantsDesc: "Replacing missing teeth with precise, safe implants using digital planning to restore full jaw function and appearance.",
+                srvVeneersTitle: "Veneers & Aesthetics",
+                srvVeneersDesc: "Designing Hollywood smiles with ultra-precise Veneers and E-max lenses for a stunning, natural appearance.",
+                srvWhiteningTitle: "Teeth Whitening",
+                srvWhiteningDesc: "Effective removal of stains and discoloration for a brighter, radiant smile safe for tooth enamel.",
+                srvFillingsTitle: "Cosmetic Fillings",
+                srvFillingsDesc: "Tooth-colored composite fillings perfectly matched to address cavities and aesthetic gaps seamlessly.",
+                srvRootCanalTitle: "Root Canal Treatment",
+                srvRootCanalDesc: "Painless root canal therapy using advanced cleaning and sterilizing technology to save damaged teeth.",
+                srvRestorativeTitle: "Restorative Dentistry",
+                srvRestorativeDesc: "Restoring damaged or broken teeth to their full functional strength and natural appearance with high quality.",
+                srvProsthoTitle: "Prosthodontics",
+                srvProsthoDesc: "Custom crowns, bridges, and prosthetics to restore function, bite alignment, and overall facial aesthetics.",
+                srvOrthoTitle: "Orthodontics",
+                srvOrthoDesc: "Metal and clear aligner solutions to align teeth and improve bite function for adults and children.",
+                srvPediatricTitle: "Pediatric Dentistry",
+                srvPediatricDesc: "Specialized, fear-free dental care for children, focusing on preventive treatments and early decay management.",
+                srvPerioTitle: "Periodontal Treatment",
+                srvPerioDesc: "Comprehensive gum disease care, scaling, and deep cleaning to maintain healthy supporting tissues.",
+                srvCtaTitle: "Specialized Consultation",
+                srvCtaDesc: "Book your appointment now for a comprehensive assessment and customized treatment plan.",
+                srvCtaBtn: "Book Appointment Now",
                 footerDesc: "Specialized clinic offering high-end dental cosmetic and medical care with cutting-edge technology.",
                 quickLinksTitle: "Quick Links",
                 followUsTitle: "Follow Us",
@@ -349,7 +444,6 @@
             }
         };
 
-        // قراءة اللغة المحفوظة أو استخدام العربية كافتراضي
         let currentLang = localStorage.getItem('preferredLang') || 'ar';
 
         function applyLanguage(lang) {
@@ -398,7 +492,6 @@
             }
         }
 
-        // تطبيق اللغة مباشرة عند تحميل الصفحة
         document.addEventListener('DOMContentLoaded', () => {
             applyLanguage(currentLang);
         });

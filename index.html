@@ -4,6 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title id="page-title" data-i18n="pageTitle">Glow Dental Clinic | الرئيسية</title>
+
+    <!-- وسوم تحسين محركات البحث SEO -->
+    <meta name="description" content="عيادة Glow Dental Clinic - عيادة تخصصية لطب وتجميل الأسنان، زراعة وتقويم الأسنان وابتسامة هوليود في الدقي، الجيزة. نوفر رعاية متكاملة بأحدث الأجهزة.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://glowdentalclinic.com/">
+
+    <!-- بطاقات المشاركة على السوشيال ميديا (Open Graph & Twitter Cards) -->
+    <meta property="og:title" content="Glow Dental Clinic | الرئيسية">
+    <meta property="og:description" content="نصنع الابتسامة التي تستحقها بأحدث التقنيات الطبية في الدقي، الجيزة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glowdentalclinic.com/">
+    <meta property="og:image" content="https://glowdentalclinic.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Schema.org - بيانات النشاط التجاري المحلي -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Glow Dental Clinic",
+      "image": "https://glowdentalclinic.com/logo.png",
+      "telephone": "+201551235518",
+      "url": "https://glowdentalclinic.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "20 شارع الثورة، الدور الرابع",
+        "addressLocality": "الدقي",
+        "addressRegion": "الجيزة",
+        "addressCountry": "EG"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "14:00",
+          "closes": "22:00"
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -30,7 +79,17 @@
         }
     </script>
 </head>
-<body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen overflow-x-hidden max-w-full">
+<body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-rose selection:text-white flex flex-col min-h-screen overflow-x-hidden max-w-full relative">
+
+<!-- خلفية الثيم الثلاثي الأبعاد باللون الأبيض والرمادي الناصع فقط -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden w-full h-full select-none bg-brand-bg">
+    <img 
+        src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop" 
+        alt="3D Fluid White Background" 
+        class="w-full h-full object-cover object-left opacity-35 filter grayscale brightness-125 contrast-110 mix-blend-multiply"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#FAF7F5]/40 via-transparent to-[#FAF7F5]/60"></div>
+</div>
 
     <!-- Header -->
     <header class="w-full py-2 px-3 md:px-12 flex justify-between items-center border-b border-stone-200/60 sticky top-0 bg-brand-bg/90 backdrop-blur-md z-50">
@@ -113,7 +172,7 @@
         </div>
     </section>
 
-    <!-- Doctors Section -->
+    <!-- Doctors Section (كروت الأطباء بنمط الصورة الكاملة والتدرج الفاخر) -->
     <section class="py-16 md:py-20 px-6 md:px-16 max-w-7xl mx-auto overflow-hidden">
         <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16 space-y-3">
             <span class="text-xs uppercase tracking-widest px-3 py-1 bg-stone-200/70 rounded-full text-stone-700 font-semibold" data-i18n="team_tag">النخبة الطبية</span>
@@ -122,80 +181,87 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
-                    <img src="https://i.ibb.co/0j9ptKf6/imgupscaler-enhanced-2.png" alt="د. أدهم محمد" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow text-center justify-center">
-                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc1_name">د. أدهم محمد</h3>
-                    <p class="text-xs text-brand-accent font-semibold mt-1" data-i18n="doc1_title">مؤسس ومدير العيادة</p>
-                </div>
-            </div>
-
-            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
-                    <img src="https://i.ibb.co/QjtvPydH/imgupscaler-enhanced-1.png" alt="د. أحمد عزت" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow text-center justify-center">
-                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc2_name">د. أحمد عزت</h3>
-                    <p class="text-xs text-brand-accent font-semibold mt-1" data-i18n="doc2_title">ماجستير جراحة اللثة وزراعة الأسنان</p>
+            <!-- Doctor 1 -->
+            <div class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-stone-950 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-200/50">
+                <img src="https://i.ibb.co/0j9ptKf6/imgupscaler-enhanced-2.png" alt="د. أدهم محمد" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/40 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-5 text-center flex flex-col items-center">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-wide drop-shadow-sm" data-i18n="doc1_name">د. أدهم محمد</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 leading-snug" data-i18n="doc1_title">مؤسس ومدير العيادة</p>
+                    <span class="w-6 h-0.5 bg-brand-accent/80 rounded-full mt-2.5 opacity-0 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></span>
                 </div>
             </div>
 
-            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
-                    <img src="https://i.ibb.co/5h96HcnP/imgupscaler-enhanced.png" alt="د. محمد علي" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow text-center justify-center">
-                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc3_name">د. محمد علي</h3>
-                    <p class="text-xs text-brand-accent font-semibold mt-1" data-i18n="doc3_title">ماجستير التركيبات والزراعة - جامعة القاهرة</p>
-                </div>
-            </div>
-
-            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
-                    <img src="doctors/dr-noura-saleh.jpg" alt="د. نورة صالح" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow text-center justify-center">
-                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc4_name">د. نورة صالح</h3>
-                    <p class="text-xs text-brand-accent font-semibold mt-1" data-i18n="doc4_title">دكتوراه تقويم الأسنان - جامعة القاهرة</p>
+            <!-- Doctor 2 -->
+            <div class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-stone-950 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-200/50">
+                <img src="https://i.ibb.co/QjtvPydH/imgupscaler-enhanced-1.png" alt="د. أحمد عزت" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/40 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-5 text-center flex flex-col items-center">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-wide drop-shadow-sm" data-i18n="doc2_name">د. أحمد عزت</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 leading-snug" data-i18n="doc2_title">ماجستير جراحة اللثة وزراعة الأسنان</p>
+                    <span class="w-6 h-0.5 bg-brand-accent/80 rounded-full mt-2.5 opacity-0 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></span>
                 </div>
             </div>
 
-            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
-                    <img src="doctors/dr-yumna-elqassas.jpg" alt="د. يمنى القصاص" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow text-center justify-center">
-                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc5_name">د. يمنى القصاص</h3>
-                    <p class="text-xs text-brand-accent font-semibold mt-1" data-i18n="doc5_title">الزمالة الإيطالية في زراعة الأسنان</p>
-                </div>
-            </div>
-
-            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
-                    <img src="https://i.ibb.co/20qvVQ1p/imgupscaler-enhanced-3.png" alt="د. إبراهيم عطية" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow text-center justify-center">
-                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc6_name">د. إبراهيم عطية</h3>
-                    <p class="text-xs text-brand-accent font-semibold mt-1" data-i18n="doc6_title">الزمالة الإيطالية في زراعة الأسنان</p>
+            <!-- Doctor 3 -->
+            <div class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-stone-950 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-200/50">
+                <img src="https://i.ibb.co/5h96HcnP/imgupscaler-enhanced.png" alt="د. محمد علي" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/40 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-5 text-center flex flex-col items-center">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-wide drop-shadow-sm" data-i18n="doc3_name">د. محمد علي</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 leading-snug" data-i18n="doc3_title">ماجستير التركيبات والزراعة - جامعة القاهرة</p>
+                    <span class="w-6 h-0.5 bg-brand-accent/80 rounded-full mt-2.5 opacity-0 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></span>
                 </div>
             </div>
 
-            <div class="bg-brand-card rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div class="aspect-[4/5] bg-stone-300 relative overflow-hidden">
-                    <img src="doctors/dr-yara-adel.jpg" alt="د. يارا عادل" class="w-full h-full object-cover">
+            <!-- Doctor 4 -->
+            <div class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-stone-950 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-200/50">
+                <img src="doctors/dr-noura-saleh.jpg" alt="د. نورة صالح" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/40 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-5 text-center flex flex-col items-center">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-wide drop-shadow-sm" data-i18n="doc4_name">د. نورة صالح</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 leading-snug" data-i18n="doc4_title">دكتوراه تقويم الأسنان - جامعة القاهرة</p>
+                    <span class="w-6 h-0.5 bg-brand-accent/80 rounded-full mt-2.5 opacity-0 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow text-center justify-center">
-                    <h3 class="text-lg font-bold text-stone-900" data-i18n="doc7_name">د. يارا عادل</h3>
-                    <p class="text-xs text-brand-accent font-semibold mt-1" data-i18n="doc7_title">أخصائية العلاج التحفظي وتجميل الأسنان</p>
+            </div>
+
+            <!-- Doctor 5 -->
+            <div class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-stone-950 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-200/50">
+                <img src="doctors/dr-yumna-elqassas.jpg" alt="د. يمنى القصاص" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/40 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-5 text-center flex flex-col items-center">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-wide drop-shadow-sm" data-i18n="doc5_name">د. يمنى القصاص</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 leading-snug" data-i18n="doc5_title">الزمالة الإيطالية في زراعة الأسنان</p>
+                    <span class="w-6 h-0.5 bg-brand-accent/80 rounded-full mt-2.5 opacity-0 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></span>
+                </div>
+            </div>
+
+            <!-- Doctor 6 -->
+            <div class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-stone-950 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-200/50">
+                <img src="https://i.ibb.co/20qvVQ1p/imgupscaler-enhanced-3.png" alt="د. إبراهيم عطية" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/40 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-5 text-center flex flex-col items-center">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-wide drop-shadow-sm" data-i18n="doc6_name">د. إبراهيم عطية</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 leading-snug" data-i18n="doc6_title">الزمالة الإيطالية في زراعة الأسنان</p>
+                    <span class="w-6 h-0.5 bg-brand-accent/80 rounded-full mt-2.5 opacity-0 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></span>
+                </div>
+            </div>
+
+            <!-- Doctor 7 -->
+            <div class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-stone-950 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 border border-stone-200/50">
+                <img src="doctors/dr-yara-adel.jpg" alt="د. يارا عادل" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/40 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-5 text-center flex flex-col items-center">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-wide drop-shadow-sm" data-i18n="doc7_name">د. يارا عادل</h3>
+                    <p class="text-xs text-brand-accent font-semibold mt-1 leading-snug" data-i18n="doc7_title">أخصائية العلاج التحفظي وتجميل الأسنان</p>
+                    <span class="w-6 h-0.5 bg-brand-accent/80 rounded-full mt-2.5 opacity-0 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 md:py-20 bg-stone-100/60 px-6 md:px-16 overflow-hidden">
+    <section id="services" class="py-16 md:py-20 bg-stone-100/60 backdrop-blur-[2px] px-6 md:px-16 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-xl mx-auto mb-12 md:mb-16 space-y-3">
                 <h3 class="text-xs uppercase tracking-widest text-stone-500 font-semibold" data-i18n="srvTag">تخصصاتنا</h3>
@@ -203,7 +269,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <div class="bg-brand-bg p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-shadow">
+                <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-shadow">
                     <span class="text-2xl mb-4 block">✨</span>
                     <h5 class="text-lg md:text-xl font-medium mb-3 text-stone-800" data-i18n="srv1Title">ابتسامة هوليود (Veneers)</h5>
                     <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv1Desc">
@@ -211,7 +277,7 @@
                     </p>
                 </div>
 
-                <div class="bg-brand-bg p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-shadow">
+                <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-shadow">
                     <span class="text-2xl mb-4 block">🦷</span>
                     <h5 class="text-lg md:text-xl font-medium mb-3 text-stone-800" data-i18n="srv2Title">زراعة وتقويم الأسنان</h5>
                     <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv2Desc">
@@ -219,7 +285,7 @@
                     </p>
                 </div>
 
-                <div class="bg-brand-bg p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-shadow">
+                <div class="bg-brand-bg/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-stone-200/80 hover:shadow-md transition-shadow">
                     <span class="text-2xl mb-4 block">🌿</span>
                     <h5 class="text-lg md:text-xl font-medium mb-3 text-stone-800" data-i18n="srv3Title">العناية المتكاملة والوقاية</h5>
                     <p class="text-xs md:text-sm text-stone-600 font-light leading-relaxed" data-i18n="srv3Desc">
@@ -231,7 +297,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-stone-900 text-white px-6 md:px-16 text-sm mt-auto border-t border-stone-800 overflow-hidden">
+    <footer class="py-12 bg-stone-900 text-white px-6 md:px-16 text-sm mt-auto border-t border-stone-800 overflow-hidden relative z-10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
             <div class="space-y-3">
                 <p class="font-bold text-xl tracking-wider uppercase">Glow Dental Clinic</p>
